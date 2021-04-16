@@ -26,7 +26,7 @@ jobs:
       run: |
         git worktree remove workspace
         git add docs
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+#        git config --local user.email "action@github.com"
+#        git config --local user.name "GitHub Action"
         git commit -m "automated Sphinx build of commit to main"
         git push
