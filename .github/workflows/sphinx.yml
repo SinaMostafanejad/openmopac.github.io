@@ -11,6 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        # This gets all branches (1 = only current branch)
+        fetch-depth: 0
     - name: Install dependencies
       run: pip install -r requirements.txt
     - name: Sphinx build on gh-pages
