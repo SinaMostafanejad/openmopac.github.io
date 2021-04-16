@@ -16,13 +16,17 @@ jobs:
         fetch-depth: 0
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Sphinx build
-      run: sphinx-build -b html source docs
-    - name: Commit and Push changes to gh-pages branch
+    - name: Setup worktree
       run: |
         git checkout gh-pages
+        git worktree add workspace main
+    - name: Sphinx build
+      run: sphinx-build -b html workspace/source docs
+    - name: Commit and Push changes to gh-pages branch
+      run: |
+        git worktree remove workspace
         git add docs
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m "automatic Sphinx build of commit to main"
+        git commit -m "automated Sphinx build of commit to main"
         git push
