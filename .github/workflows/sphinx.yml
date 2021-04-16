@@ -19,6 +19,7 @@ jobs:
     - name: Sphinx build
       run: sphinx-build -b html source docs
     - name: Commit changes to gh-pages branch
+      run: |
         git checkout gh-pages
         git add docs
         git config --local user.email "action@github.com"
