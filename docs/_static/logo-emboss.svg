@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="115mm"
+   height="25mm"
+   viewBox="0 0 115 25"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="MOPAC-emboss-alt.svg"
+   inkscape:export-filename="/Users/jemoussa/MOPAC-emboss.png"
+   inkscape:export-xdpi="152.39999"
+   inkscape:export-ydpi="152.39999">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect3721"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect3590"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect3571"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3504"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3496"
+       is_visible="true"
+       lpeversion="1" />
+    <marker
+       style="overflow:visible"
+       id="DotL"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="DotL"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path2582" />
+    </marker>
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect2515"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect2485"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1132">
+      <rect
+         style="fill:#ffcd00;fill-opacity:1;stroke:none;stroke-width:0.536985;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect1134"
+         width="100"
+         height="20"
+         x="-1.4210855e-14"
+         y="80" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1211">
+      <rect
+         style="fill:#ffcd00;fill-opacity:1;stroke:none;stroke-width:0.480293;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect1213"
+         width="100"
+         height="16"
+         x="0"
+         y="84" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1362">
+      <rect
+         style="fill:#ffcd00;fill-opacity:1;stroke:none;stroke-width:0.480293;stroke-miterlimit:4;stroke-dasharray:none"
+         id="rect1364"
+         width="100"
+         height="16"
+         x="-7.1054274e-15"
+         y="84" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1040">
+      <rect
+         style="fill:#4bcdff;fill-opacity:1;stroke-width:0.330999"
+         id="rect1042"
+         width="24.379465"
+         height="34.58482"
+         x="103.37649"
+         y="-60.476189" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1179">
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.93125"
+         id="circle1181"
+         cx="34.490326"
+         cy="-46.58556"
+         r="71.45015" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1246">
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.24999"
+         id="circle1248"
+         cx="51.850288"
+         cy="153.41273"
+         r="50" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask1432">
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:6.24999"
+         id="circle1434"
+         cx="50"
+         cy="50.000004"
+         r="50" />
+    </mask>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath945">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.329015"
+         id="rect947"
+         width="109.23512"
+         height="27.875746"
+         x="-4.3467259"
+         y="36.040001" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath945-4">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.329015"
+         id="rect947-8"
+         width="109.23512"
+         height="27.875746"
+         x="-4.3467259"
+         y="36.040001" />
+    </clipPath>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask988">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.621168"
+         id="path990"
+         sodipodi:type="arc"
+         sodipodi:cx="50"
+         sodipodi:cy="50"
+         sodipodi:rx="50"
+         sodipodi:ry="50"
+         sodipodi:start="1.4599662"
+         sodipodi:end="1.4589015"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 55.530169,99.693231 A 50,50 0 0 1 0.30824247,55.543396 50,50 0 0 1 44.443378,0.30971975 50,50 0 0 1 99.688799,44.430152 50,50 0 0 1 55.583074,99.687315"
+         clip-path="url(#clipPath945-4)"
+         transform="matrix(0.7976424,-0.60313069,-0.60313069,-0.7976424,0,0)" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask992">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.621168"
+         id="path994"
+         sodipodi:type="arc"
+         sodipodi:cx="50"
+         sodipodi:cy="50"
+         sodipodi:rx="50"
+         sodipodi:ry="50"
+         sodipodi:start="1.4599662"
+         sodipodi:end="1.4589015"
+         sodipodi:open="true"
+         sodipodi:arc-type="arc"
+         d="M 55.530169,99.693231 A 50,50 0 0 1 0.30824247,55.543396 50,50 0 0 1 44.443378,0.30971975 50,50 0 0 1 99.688799,44.430152 50,50 0 0 1 55.583074,99.687315"
+         clip-path="url(#clipPath945-4)"
+         transform="rotate(-37.094446)" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask2497">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.329015"
+         id="rect2499"
+         width="109.23512"
+         height="27.875746"
+         x="-4.3467259"
+         y="36.040001"
+         transform="rotate(-37.094446)" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask2545">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.340857"
+         id="rect2547"
+         width="8.3257427"
+         height="23.807501"
+         x="53.732117"
+         y="-11.790356"
+         transform="rotate(37.094447)" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask2564">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.340857"
+         id="rect2566"
+         width="8.3257427"
+         height="23.807501"
+         x="-6.5291591"
+         y="-90.079353"
+         transform="matrix(0.7976424,-0.60313067,-0.60313067,-0.7976424,0,0)" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask2306">
+      <rect
+         style="fill:#ffffff;stroke-width:0.257344"
+         id="rect2308"
+         width="100"
+         height="36.026608"
+         x="0"
+         y="0" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask2316">
+      <rect
+         style="fill:#ffffff;stroke-width:0.267729"
+         id="rect2318"
+         width="99.90535"
+         height="36.908249"
+         x="0.36248431"
+         y="63.920853" />
+    </mask>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="299.0274"
+     inkscape:cy="74.411124"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1364"
+     inkscape:window-height="2236"
+     inkscape:window-x="76"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="true"
+     showguides="false"
+     inkscape:pagecheckerboard="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path2505"
+       clip-path="none"
+       style="fill:#ffffff;stroke-width:0.0983874"
+       d="M 12.439551,0 A 12.499995,12.499995 0 0 0 0,12.500012 12.499995,12.499995 0 0 0 12.500012,25.000024 12.499995,12.499995 0 0 0 25.000024,12.500012 12.499995,12.499995 0 0 0 12.500012,0 12.499995,12.499995 0 0 0 12.439551,0 Z m 1.068152,3.9785684 a 2.1249989,2.1249989 0 0 1 1.25367,0.4134114 2.1249989,2.1249989 0 0 1 0.715202,2.4959717 2.1249989,2.1249989 0 0 1 -2.232422,1.3249839 l -2.078426,2.7677896 a 2.967438,2.967438 0 0 1 0.0015,3.014803 l 2.066541,2.764689 a 2.1249989,2.1249989 0 0 1 2.260326,1.281576 2.1249989,2.1249989 0 0 1 -0.669209,2.510441 2.1249989,2.1249989 0 0 1 -2.598291,-0.01344 2.1249989,2.1249989 0 0 1 -0.642855,-2.517676 L 9.5348185,15.30966 A 2.967438,2.967438 0 0 1 6.213574,14.233756 2.967438,2.967438 0 0 1 6.214604,10.742496 2.967438,2.967438 0 0 1 9.5368816,9.6686604 l 2.0272664,-2.692859 a 2.1249989,2.1249989 0 0 1 0.60203,-2.5254272 2.1249989,2.1249989 0 0 1 1.341521,-0.4718058 z" />
+    <path
+       d="M 46.36877,20.957474 H 43.45946 V 10.874069 L 38.58306,20.957474 33.77278,10.874069 V 20.957474 H 30.88 V 4.4273028 h 2.89278 l 4.81028,9.7858612 4.8764,-9.7858612 h 2.90931 z"
+       style="font-size:28.9278px;line-height:1.25;font-family:'Roadgeek 2014 Series E';-inkscape-font-specification:'Roadgeek 2014 Series E';fill:#ffffff;stroke-width:0.264583"
+       id="path3619" />
+    <path
+       d="m 64.027771,12.609737 q 0,3.884591 -1.86791,6.264935 -1.867909,2.363815 -4.992111,2.363815 -3.405216,0 -5.207004,-2.562177 -1.801789,-2.562176 -1.801789,-6.016982 0,-3.9672411 1.86791,-6.2318745 1.884439,-2.2811636 5.140883,-2.2811636 3.025021,0 4.942521,2.3472842 1.9175,2.3472843 1.9175,6.1161629 z m -2.975431,0.04959 q 0,-2.628297 -1.008341,-4.0829523 -1.00834,-1.4711852 -2.876249,-1.4711852 -1.86791,0 -2.925841,1.4877154 -1.057931,1.4711851 -1.057931,4.0664221 0,2.661357 1.057931,4.149073 1.057931,1.487715 2.925841,1.487715 1.471185,0 2.396874,-0.909159 0.92569,-0.92569 1.206703,-2.099332 0.281013,-1.190172 0.281013,-2.628297 z"
+       style="font-size:28.9278px;line-height:1.25;font-family:'Roadgeek 2014 Series E';-inkscape-font-specification:'Roadgeek 2014 Series E';fill:#ffffff;stroke-width:0.264583"
+       id="path3621" />
+    <path
+       d="m 81.054881,9.4690049 q 0,1.3058831 -0.694267,2.5125861 -0.694267,1.190172 -1.851379,1.834849 -1.190172,0.644677 -2.975431,0.661207 h -4.694568 v 6.479827 H 67.830745 V 4.4273028 h 7.703059 q 1.669548,0 2.975431,0.6942672 1.190172,0.677737 1.867909,1.8183188 0.677737,1.1405818 0.677737,2.5291161 z m -2.97543,0 q 0,-0.9422197 -0.661207,-1.5042455 -0.661207,-0.5620259 -1.768728,-0.5620259 h -4.81028 v 4.0994825 h 4.81028 q 1.074461,0 1.752198,-0.562026 0.677737,-0.562026 0.677737,-1.4711851 z"
+       style="font-size:28.9278px;line-height:1.25;font-family:'Roadgeek 2014 Series E';-inkscape-font-specification:'Roadgeek 2014 Series E';fill:#ffffff;stroke-width:0.264583"
+       id="path3623" />
+    <path
+       d="m 99.249691,20.957474 h -3.173793 l -1.619957,-3.88459 h -7.190624 l -1.636487,3.88459 H 82.388916 L 89.331588,4.4273028 h 3.025021 z M 93.150058,14.097453 90.868894,8.5598455 88.53814,14.097453 Z"
+       style="font-size:28.9278px;line-height:1.25;font-family:'Roadgeek 2014 Series E';-inkscape-font-specification:'Roadgeek 2014 Series E';fill:#ffffff;stroke-width:0.264583"
+       id="path3625" />
+    <path
+       d="m 114.96304,17.585319 q -0.90916,1.719138 -2.62829,2.694418 -1.70261,0.95875 -3.75235,0.95875 -3.25645,0 -5.14089,-2.330754 -1.86791,-2.330755 -1.86791,-6.248405 0,-3.9341808 1.86791,-6.2153444 1.88444,-2.2976937 5.14089,-2.2976937 2.01668,0 3.71929,0.9587499 1.71913,0.9587499 2.66135,2.6944179 l -2.61176,1.3720041 q -0.5455,-0.8265085 -1.15712,-1.2067024 -1.07446,-0.8430388 -2.61176,-0.8595689 -1.4216,0 -2.34729,0.8926292 -0.92569,0.8760991 -1.28935,2.0497413 -0.34713,1.173642 -0.34713,2.562176 0,2.694418 1.05793,4.198664 1.05793,1.487715 2.92584,1.487715 1.10752,0 1.88444,-0.429784 0.77691,-0.446315 1.88444,-1.669547 z"
+       style="font-size:28.9278px;line-height:1.25;font-family:'Roadgeek 2014 Series E';-inkscape-font-specification:'Roadgeek 2014 Series E';fill:#ffffff;stroke-width:0.264583"
+       id="path3627" />
+  </g>
+</svg>
