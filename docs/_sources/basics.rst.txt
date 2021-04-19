@@ -1,10 +1,8 @@
 Getting Started
 ===============
 
-A summary of what MOPAC is capable of doing.
+A summary of what MOPAC is capable of doing and the most common ways in which it is used.
 
-A description of how to download & install MOPAC.
+Instructions on how to download & install MOPAC.
 
 Suggestions on how a new user might make use of this website.
-
-Ask users to cite MOPAC if they use it to produce results in a scientific publication.
