@@ -29,8 +29,12 @@ author = 'Jonathan Moussa, James Stewart'
 # ones.
 extensions = [
     'sphinx.ext.githubpages',
-    'sphinx.ext.mathjax'
+    'sphinx.ext.mathjax',
+    'sphinxcontrib.bibtex',
 ]
+
+# Main bibliography for the documentation (excluding scientific impact list)
+bibtex_bibfiles = ['refs.bib','impact/impact.bib']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
