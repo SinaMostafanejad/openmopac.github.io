@@ -21,6 +21,8 @@ Graph of MOPAC journal references as a function of time.
   sampled uniformly over years and sampled uniformly over papers published within each year.
   This sampling scheme was chosen because Google Scholar only provides detailed information for the first 1000 search results,
   and MOPAC is cited frequently enough that multi-year searches exceed this cap.
+  NOTE: for more recent searches, we use the search string 'MOPAC OR "MOPAC2007" OR "MOPAC2009" OR "MOPAC2012" OR "MOPAC2016"'
+        because Google Scholar can't parse "MOPAC" as being part of these other, more recent synonymous software names
 
 An actively updated list of new papers making reference to MOPAC.
 
@@ -36,7 +38,7 @@ Note the methodology for calculating these metrics in the page source.
   gui = MOPAC was used through a GUI,
         = chem3d [Cambridge Soft, defunct product]
         = chemdes [http://www.scbdd.com/chemdes/]
-        = codessa [http://www.semichem.com/codessa/default.php]
+        = codessa [http://www.semichem.com/codessa/default.php] (dubious: this is a GUI for AMPAC, not MOPAC)
         = drudit [https://www.drudit.com/]
         = insight [https://www.3ds.com/products-services/biovia/products/data-science/biovia-insight/]
         = jmol [http://jmol.sourceforge.net/]
