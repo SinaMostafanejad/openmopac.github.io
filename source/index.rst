@@ -15,21 +15,21 @@ See http://openmopac.net for the closed-source MOPAC website from which much of 
 Ask users to cite MOPAC if they use it to produce results in a scientific publication.
 
 .. toctree::
-   :maxdepth: 2
+  :hidden:
+  :maxdepth: 2
 
-   basics
-   downloads
-   examples
-   keywords1
-   keywords2
-   diskless
-   questions
-   forum
-   data
-   methodology
-   history
-   bibliography
-   impact
+  basics
+  downloads
+  examples
+  keywords
+  api
+  questions
+  forum
+  data
+  methodology
+  history
+  bibliography
+  impact
 
 Indices and tables
 ==================

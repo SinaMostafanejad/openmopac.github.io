@@ -1,0 +1,7 @@
+B
+-
+
+.. toctree::
+  :hidden:
+
+  BAR

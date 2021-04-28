@@ -56,6 +56,7 @@ html_theme_options = {
     'logo_only': True,
     'display_version': False,
     'style_nav_header_background': '#fcfcfc',
+    'collapse_navigation': False,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
