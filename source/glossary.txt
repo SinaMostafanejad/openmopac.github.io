@@ -1,5 +1,283 @@
-========================       ========================================
-:ref:`0SCF`                    parse the input file, then quit
-:ref:`1SCF`                    do not relax the atoms
-:ref:`BAR`                     reduce bar length by a maximum of x%
-========================       ========================================
+===================  ======================================================================================================================
+:ref:`ampersand`     Turn next line into keywords 
+:ref:`plus`          Add another line of keywords 
+:ref:`plusplus`      Split a line of keywords or SETUP
+:ref:`0SCF`          Read in data, then stop 
+:ref:`1ELECTRON`     Print final one-electron matrix 
+:ref:`1SCF`          Do one scf and then stop 
+:ref:`A0`            Input geometry is in atomic units
+:ref:`ADD-H`         Add hydrogen atoms (intended for use with organic compounds)
+:ref:`AIDER`         Read in ab-initio derivatives 
+:ref:`AIGIN`         Geometry must be in Gaussian format 
+:ref:`AIGOUT`        Print the geometry in Gaussian format in the ARC file
+:ref:`ALLBONDS`      Print final bond-order matrix, including bonds to hydrogen 
+:ref:`ALLVEC`        Print all vectors 
+:ref:`ALT_A`         In PDB files with alternative atoms, select atoms A 
+:ref:`AM1`           Use the AM1 hamiltonian 
+:ref:`ANGSTROMS`     Input geometry is in Angstroms
+:ref:`AUTOSYM`       Symmetry to be imposed automatically 
+:ref:`AUX`           Output auxiliary information for use by other programs
+:ref:`BANANA`        Generate localized molecular orbitals with hybrid orbitals for double bonds
+:ref:`BAR`           reduce bar length by a maximum of n.nn% 
+:ref:`BCC`           Only even unit cells used (used by BZ) 
+:ref:`BFGS`          Use the Flepo or BFGS geometry optimizer
+:ref:`BIGCYCLES`     Do a maximum of n big steps 
+:ref:`BIRADICAL`     System has two unpaired electrons 
+:ref:`BONDS`         Print final bond-order matrix 
+:ref:`BRZ`           Output data for Program BZ - analysis of the Brillouin Zones
+:ref:`CdotAdotSdot`  Defines the size of a complete active space calculation in an INDO/S calculation
+:ref:`CdotIdot`      A multi-electron configuration interaction specified 
+:ref:`CdotIdotDdot`  Defines the active space for double excitations in an INDO/S calculation
+:ref:`CAMP`          Use Camp-King converger in SCF 
+:ref:`CARTAB`        Print point-group character table
+:ref:`CHAINS`        In a protein, explicitely define the letters of chains.
+:ref:`CHARGE`        Charge on system = n (e.g. NH4 = +1) 
+:ref:`CHARGES`       Print net charge on system, and all charges in the system
+:ref:`CHARST`        Print details of working in CHARST
+:ref:`CHECK`         Report possible faults in input geometry
+:ref:`CIS`           C.I. uses 1 electron excitations only 
+:ref:`CISD`          C.I. uses 1 and electron excitations 
+:ref:`CISDT`         C.I. uses 1, 2 and 3 electron excitations 
+:ref:`COMPARE`       Compare the geometries of two systems
+:ref:`COMPFG`        Print heat of formation calculated in COMPFG 
+:ref:`COSCCH`        Add in COSMO charge corrections
+:ref:`COSWRT`        Write details of the solvent accessible surface to a file
+:ref:`CUTOFF`        In MOZYME, the interatomic distance where the NDDO approximation stops (default: 10 &Aring;ngstroms)
+:ref:`CUTOFP`        Madelung distance cutoff is n.nn &Aring;ngstroms. This can speed up the calculations (default: 30 &Aring;ngstroms)
+:ref:`CUTOFS`        In MOZYME, the interatomic distance beyond which overlap integrals are ignored (default: 7 &Aring;ngstroms)
+:ref:`CVB`           In MOZYME. add and remove specific bonds to allow a Lewis or PDB structure.
+:ref:`CYCLES`        Do a maximum of n steps 
+:ref:`DAMP`          n MOZYME. damp SCF oscillations using a factor of n.nn
+:ref:`DATA`          Input data set is re-defined to text
+:ref:`DCART`         Print part of working in DCART 
+:ref:`DDMAX`         See EF code 
+:ref:`DDMIN`         Minimum trust radius in a EF/TS calculation 
+:ref:`DEBUG`         Debug option turned on 
+:ref:`DEBUGPULAY`    Print working in PULAY
+:ref:`DENOUT`        Density matrix output 
+:ref:`DENSITY`       Print final density matrix 
+:ref:`DERI1`         Print part of working in DERI1 
+:ref:`DERI2`         Print part of working in DERI2 
+:ref:`DERITR`        Print part of working in DERIT 
+:ref:`DERIV`         Print part of working in DERIV 
+:ref:`DERNVO`        Print part of working in DERNVO 
+:ref:`DFORCE`        Force calculation specified, also print force matrix. 
+:ref:`DFP`           Use Davidson-Fletcher-Powell method to optimize geometries <!--
+:ref:`DIPOLE`        Fit the ESP to the calculated dipole 
+:ref:`DIPOLE`        In animations graphs, replace &Delta;Hf with dipole
+:ref:`DIPX`          X component of dipole to be fitted 
+:ref:`DIPY`          Y component of dipole to be fitted 
+:ref:`DIPZ`          Z component of dipole to be fitted -->
+:ref:`DISEX`         Distance for interactions in fine grid in COSMO 
+:ref:`DISP`          Print the hydrogen bonding and dispersion contributions to the heat of formation
+:ref:`DMAX`          Maximum stepsize in eigenvector following 
+:ref:`DOUBLET`       Doublet state required 
+:ref:`DRC`           Dynamic reaction coordinate calculation 
+:ref:`DUMP`          Write restart files every n seconds 
+:ref:`ECHO`          Data are echoed back before calculation starts 
+:ref:`EF`            Use the EigenFollowing routine for geometry optimization 
+:ref:`EIGEN`         Print canonical eigenvectors instead of LMOs in MOZYME calculations
+:ref:`EIGS`          Print all eigenvalues in ITER 
+:ref:`ENPART`        Partition energy into components 
+:ref:`EPS`           Dielectric constant in COSMO calculation 
+:ref:`ESP`           Do not use.&nbsp; Use GRAPHF instead.
+:ref:`ESPGRID`       Do not use.&nbsp; Use GRAPHF instead.
+:ref:`ESR`           Calculate RHF spin density 
+:ref:`EXCITED`       Optimize first excited singlet state 
+:ref:`EXTERNAL`      Read parameters off disk 
+:ref:`FIELD`         An external electric field is to be used 
+:ref:`FILL`          In RHF open and closed shell, force M.O. n to be filled 
+:ref:`FLEPO`         Print details of geometry optimization 
+:ref:`FMAT`          Print details of working in FMAT 
+:ref:`FOCK`          Print last Fock matrix 
+:ref:`FORCE`         Calculate vibrational frequencies 
+:ref:`FREQCY`        Print symmetrized Hessian in a FORCE calculation
+:ref:`GEO-OK`        Override some safety checks 
+:ref:`GEO_DAT`       Read in geometry from the file &lt;text&gt;
+:ref:`GEO_REF`       Read in a second geometry from the file &lt;text&gt;
+:ref:`GNORM`         Exit when gradient norm drops below n .n kcal/mol/Angstrom
+:ref:`GRADIENTS`     Print all gradients 
+:ref:`GRAPH`         Generate unformatted file for graphics 
+:ref:`GRAPHF`        Generate formatted file for graphics suitable for&nbsp; Jmol and MOPETE.
+:ref:`H-PRIORITY`    Heat of formation takes priority in DRC 
+:ref:`HCORE`         Print all parameters used, the one-electron matrix, and two-electron integrals
+:ref:`HESS`          Options for calculating Hessian matrices in EF 
+:ref:`HESSIAN`       Print Hessian from geometry optimization
+:ref:`HTML`          Write a web-page for displaying and editing a protein
+:ref:`HYPERFINE`     Hyperfine coupling constants to be calculated 
+:ref:`INDO`          Use the INDO/S method
+:ref:`INT`           Make all coordinates internal coordinates 
+:ref:`INVERT`        Reverse all optimization flags
+:ref:`IONIZE`        Do not use - use SITE=(IONIZE) instead 
+:ref:`IRC`           Intrinsic reaction coordinate calculation 
+:ref:`ISOTOPE`       Force matrix written to disk (channel 9 ) 
+:ref:`ITER`          Print details of working in ITER 
+:ref:`ITRY`          Set limit of number of SCF iterations to n 
+:ref:`IUPD`          Mode of Hessian update in eigenvector following 
+:ref:`KINETIC`       Excess kinetic energy added to DRC calculation 
+:ref:`KING`          Use Camp-King converger for SCF 
+:ref:`LARGE`         Print expanded output 
+:ref:`LBFGS`         Use the low-memory version of the BFGS optimizer
+:ref:`LET`           Override certain safety checks 
+:ref:`LEWIS`         Print the Lewis structure
+:ref:`LINMIN`        Print details of line minimization 
+:ref:`LOCAL`         Print localized orbitals.&nbsp; These are also called Natural Bond Orbitals or NBO
+:ref:`LOCATE-TS`     Given reactants and products, locate the transition state connecting them
+:ref:`LOG`           Generate a log file
+:ref:`MAXCI`         Use a maximum of n microstates in an INDO/S calculation
+:ref:`MECI`          Print details of MECI calculation 
+:ref:`MERS`          Keyword generated by MAKPOL for use with programBZ 
+:ref:`METAL`         Make specified atoms 100% ionic
+:ref:`MICROS`        Use specific microstates in the C.I. 
+:ref:`MINI`          Reduce the size of the output by only printing specified atoms
+:ref:`MINMEP`        Minimize MEP minima in the plane defined 
+:ref:`MMOK`          Use molecular mechanics correction to CONH bonds 
+:ref:`MNDO`          Use the MNDO hamiltonian 
+:ref:`MNDOD`         Use the MNDO-d hamiltonian 
+:ref:`MODE`          In EF, follow Hessian mode no. n 
+:ref:`MOLDAT`        Print details of working in MOLDAT 
+:ref:`MOLSYM`        Print details of working in MOLSYM 
+:ref:`MOL_QMMM`      Incorporate environmental effects in the QM/MM approach
+:ref:`MOPAC`         Use old MOPAC definition for 2nd and 3rd atoms 
+:ref:`MOZYME`        Use the Localized Molecular Orbital method to speed up the SCF
+:ref:`MRCI`          Use multi-reference configuration interaction in &nbsp;INDO/S calculations
+:ref:`MS`            In MECI, magnetic component of spin 
+:ref:`MULLIK`        Print the Mulliken population analysis 
+:ref:`Nstarstar2`    In excited state COSMO calculations, set the value of N**2
+:ref:`NLLSQ`         Minimize gradients using NLLSQ 
+:ref:`NOANCI`        Do not use analytical C.I. derivatives 
+:ref:`NOCOMMENTS`    Ignore all lines except ATOM, HETATM, and TER in PDB files
+:ref:`NOGPU`         Do not use GPU acceleration
+:ref:`NOLOG`         Suppress log file trail, where possible 
+:ref:`NOMM`          Do not use molecular mechanics correction to CONH bonds 
+:ref:`NONET`         NONET state required 
+:ref:`NONR`          Do not use Newton-Raphson method in EF 
+:ref:`NOOPT`         Do not optimize the coordinates of all atoms of type X
+:ref:`NOREOR`        In symmetry work, FORCE calculations, and whenGEO_REF is used, use the supplied orientation 
+:ref:`NORESEQ`       Suppress the default re-sequencing of atoms to the PDB sequence
+:ref:`NOSWAP`        Do not allow atom swapping when GEO_REF is used
+:ref:`NOSYM`         Point-group symmetry set to C1 
+:ref:`NOTER`         Do not put &quot;TER&quot;s in PDB files 
+:ref:`NOTHIEL`       Do not use Thiel's FSTMIN technique 
+:ref:`NOTXT`         Remove any text from atom symbols 
+:ref:`NOXYZ`         Do not print Cartesian coordinates 
+:ref:`NSPA`          Sets number of geometric segments in COSMO 
+:ref:`NSURF`         Number of surfaces in an ESP calculation 
+:ref:`OCTET`         Octet state required 
+:ref:`OLDCAV`        In COSMO, use the old Solvent Accessible Surface calculation
+:ref:`OLDENS`        Read initial density matrix off disk 
+:ref:`OLDFPC`        Use the old fundamental physical constants 
+:ref:`OLDGEO`        Previous geometry to be used 
+:ref:`OMIN`          In TS, minimum allowed overlap of eigenvectors 
+:ref:`OPEN`          Open-shell UHF or RHF calculation requested 
+:ref:`OPT`           Optimize coordinates of all atoms within n.nn &Aring;ngstroms of atoms labeled &quot;text&quot;
+:ref:`OPT`           Optimize the coordinates of all atoms of type X
+:ref:`OUTPUT`        Reduce the amount of output (useful for large systems)
+:ref:`P`             An applied pressure of n.nn Newtons/m2 to be used
+:ref:`PDB`           Input geometry is in protein data bank format 
+:ref:`PDB`           User defined chemical symbols in protein data base 
+:ref:`PDBOUT`        Output geometry in pdb format 
+:ref:`PECI`          C.I. involves paired excitations only 
+:ref:`PI`            Resolve density matrix into &sigma;, &pi;, and &delta; components 
+:ref:`PKA`           Print the pKa for ionizable hydrogen atoms attached to oxygen atoms
+:ref:`PL`            Monitor convergence of density matrix in ITER 
+:ref:`PM3`           Use the MNDO-PM3 Hamiltonian 
+:ref:`PM6`           Use the PM6 Hamiltonian 
+:ref:`PM6-D3`        Use the PM6 Hamiltonian with Grimme's corrections for dispersion 
+:ref:`PM6-D3H4`      Use PM6 with &#344;ezá&#269; and Hobza's D3H4 correction
+:ref:`PM6-D3H4X`     Use PM6 with Brahmkshatriya, et al.'s D3H4X correction
+:ref:`PM6-DHplus`    Use the PM6 Hamiltonian with corrections for dispersion and hydrogen-bonding
+:ref:`PM6-DH2`       Use the PM6 Hamiltonian with corrections for dispersion and hydrogen-bonding
+:ref:`PM6-DH2X`      Use PM6 with corrections for dispersion and hydrogen and halogen bonding
+:ref:`PM7`           Use the PM7 Hamiltonian 
+:ref:`PM7-TS`        Use the PM7-TS Hamiltonian (only for barrier heights)
+:ref:`PMEP`          Complete semiempirical MEP calculation 
+:ref:`PMEPR`         Complete semiempirical MEP in a plane to be defined 
+:ref:`POINT`         Number of points in reaction path 
+:ref:`POINT1`        Number of points in first direction in grid calculation 
+:ref:`POINT2`        Number of points in second direction in grid calculation 
+:ref:`POLAR`         Calculate first, second and third order polarizabilities 
+:ref:`POTWRT`        In ESP, write out electrostatic potential to unit 21 
+:ref:`POWSQ`         Print details of working in POWSQ 
+:ref:`PRECISE`       More stringent criteria are used
+:ref:`PRESSURE`      Apply pressure or tension to a solid or polymer
+:ref:`PRNT`          Print details of geometry optimization in EF
+:ref:`PRTCHAR`       Print charges in ARC file
+:ref:`PRTINT`        Print interatomic distances 
+:ref:`PRTMEP`        MEP contour data output to &lt;filename&gt;.mep 
+:ref:`PRTXYZ`        Print Cartesian coordinates 
+:ref:`PULAY`         Use Pulay's converger to obtain a SCF 
+:ref:`QMMM`          Incorporate environmental effects in the QM/MM approach
+:ref:`QPMEP`         Charges derived from Wang-Ford type AM1 MEP 
+:ref:`QUARTET`       Quartet state required 
+:ref:`QUINTET`       Quintet state required 
+:ref:`RABBIT`        Generate localized molecular orbitals with hybrid orbitals for double bonds
+:ref:`RAMA`          Print Ramachandra angles for the residues in a protein
+:ref:`RAPID`         In MOZYME geometry optimizations, only use atoms being optimized in the SCF 
+:ref:`RE-LOCAL`      During and at end of MOZYME calculation, re-localize the LMOs
+:ref:`RECALC`        In EF, recalculate Hessian every n steps 
+:ref:`RELSCF`        Default SCF criterion multiplied by n 
+:ref:`REORTHOG`      In MOZYME, re-orthogonalize LMO's each 10 SCF calculations.
+:ref:`RESEQ`         Re-arrange the atoms to match the PDB convention
+:ref:`RESIDUES`      Label each atom in a polypeptide with the amino acid residue
+:ref:`RESTART`       Calculation restarted 
+:ref:`RHF`           Use Restricted Hartree-Fock methods 
+:ref:`RM1`           Use the RM1 Hamiltonian
+:ref:`RMAX`          In TS, maximum allowed ratio for energy change 
+:ref:`RMIN`          In TS, minimum allowed ratio for energy change 
+:ref:`ROOT`          Root n to be optimized in a C.I. calculation 
+:ref:`RSCAL`         In EF, scale p-RFO to trust radius 
+:ref:`RSOLV`         Effective radius of solvent in COSMO 
+:ref:`SADDLE`        Optimize transition state 
+:ref:`SCALE`         Scaling factor for van der waals distance in ESP 
+:ref:`SCFCRT`        Default SCF criterion replaced by the value supplied 
+:ref:`SCINCR`        Increment between layers in ESP 
+:ref:`SEPTET`        Septet state required 
+:ref:`SETPI`         In MOZYME, some &pi; bonds are explicitly set by the user
+:ref:`SETUP`         Extra keywords to be read from setup file 
+:ref:`SEXTET`        Sextet state required 
+:ref:`SHIFT`         a damping factor of n defined to start SCF 
+:ref:`SHUT`          Send a command to MOPAC to make a restart and density file, then stop.
+:ref:`SIGMA`         Minimize gradients using SIGMA 
+:ref:`SINGLET`       Singlet state required 
+:ref:`SITE`          Define ionization state of residues in proteins
+:ref:`SLOG`          In L-BFGS optimization, use fixed step of length n .nn 
+:ref:`SLOPE`         Multiplier used to scale MNDO charges 
+:ref:`SMOOTH`        In a GRID calculation, remove artifacts caused by the order in which points are calculated
+:ref:`SNAP`          Increase precision of symmetry angles 
+:ref:`SPARKLE`       Use sparkles instead of atoms with basis sets
+:ref:`SPIN`          Print final UHF spin matrix 
+:ref:`START_RES`     Define starting residue numbers in a protein, if different from the default
+:ref:`STATIC`        Calculate Polarizability using electric fields 
+:ref:`STEP`          Step size in path 
+:ref:`STEP1`         Step size n for first coordinate in grid calculation 
+:ref:`STEP2`         Step size n for second coordinate in grid calculation 
+:ref:`STO3G`         Deorthogonalize orbitals in STO-3G basis 
+:ref:`SUPER`         Print superdelocalizabilities 
+:ref:`SYBYL`         Output a file for use by Tripos's SYBYL program
+:ref:`SYMAVG`        Average symmetry equivalent ESP charges 
+:ref:`SYMMETRY`      Impose symmetry conditions 
+:ref:`SYMOIR`        Print characters of eigenvectors and print number of I.R.s
+:ref:`SYMTRZ`        Print details of working in subroutine SYMTRZ.
+:ref:`T`             A time of n seconds requested 
+:ref:`T-PRIORITY`    Time takes priority in DRC 
+:ref:`TDIP`          Output the transition-dipole moments between excited states in an INDO/S calculation
+:ref:`THERMO`        Perform a thermodynamics calculation 
+:ref:`THREADS`       Set the number of threads to be used in parallelization to n
+:ref:`TIMES`         Print times of various stages 
+:ref:`TRANS`         The system is a transition state (used in thermodynamics calculation) 
+:ref:`TRIPLET`       Triplet state required 
+:ref:`TS`            Using EF routine for TS search 
+:ref:`UHF`           Use the Unrestricted Hartree-Fock method 
+:ref:`VDW`           Van der waals radius for atoms in COSMO defined by user 
+:ref:`VDWM`          Van der waals radius for atoms in MOZYME defined by user 
+:ref:`VECTORS`       Print final vectors
+:ref:`VELOCITY`      Supply the initial velocity vector in a DRC calculation 
+:ref:`WILLIAMS`      Use Williams surface 
+:ref:`WRTCI`         Output a maximum of n excited states in an INDO/S calculation
+:ref:`WRTCONF`       Print the CI coefficients of all electron configurations with coefficients greater than n.nn. in an INDO/S calculation
+:ref:`X-PRIORITY`    Geometry changes take priority in DRC 
+:ref:`XENO`          Allow non-standard residues in proteins to be labeled.
+:ref:`XYZ`           Do all geometric operations in Cartesian coordinates 
+:ref:`Z`             Number of mers in a cluster
+===================  ======================================================================================================================

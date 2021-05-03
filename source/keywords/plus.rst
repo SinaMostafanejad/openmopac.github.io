@@ -1,0 +1,20 @@
+.. _plus:
+
+``+``
+=====
+
+A '``+``' sign means 'read another line of keywords'. A '``+``' on line
+1 would mean that a second line of keywords should be read in. If that
+second line contains a '``+``', then a third line of keywords will be
+read in. Regardless of whether a second or a third line of keywords is
+read in, the next two lines would be description lines.
+
+Example of '``+``' option
+
+::
+
+   RESTART T=4D  OPEN(2,2) SHIFT=20 PM3 +
+   SCFCRT=1.D-8 DEBUG + ISOTOPE FMAT ECHO singlet ROOT=3
+   THERMO(300,400,1)
+   Example of data set with three lines of keywords.
+   Note:  This and the previous line are the two lines of description.

@@ -1,0 +1,277 @@
+.. _COMPARE:
+
+``COMPARE``
+===========
+
+`Description <#Description>`__ - `Procedure <#Procedure_>`__ -
+`Analysis <#Analysis>`__ - `Complete worked example (Zip file, 242
+Kb) <compare.zip>`__
+
+Description
+-----------
+
+When ``COMPARE``\ is present, a pair of protein systems is compared to
+identify similarities and differences in their geometries. These systems
+can be PDB or ENT files, MOPAC data sets, i.e., files that end in ".mop"
+or ".dat", or MOPAC archive files, i.e., files that end in ".arc". The
+comparison is done using a MOPAC data-set that contains information on
+the locations of the systems to be used.  A useful practice is to have
+the systems in one or two folders and the data-set for the comparison in
+another folder at the same level, e.g., if the systems are in
+"Users/name/Crambin/Original PDB files" and "Users/name/Crambin/MOPAC
+files" then the compare files should be in "/Users/name/Crambin/Compare"
+
+In a normal run, atoms of one system are re-arranged to match those of
+the other system, so that both systems have the same atoms in the same
+sequence. The geometry of one system, "System A", is then rotated and
+translated to minimize the difference between it and that of "System B."
+Once the systems are in maximum coincidence, an analysis is performed;
+this identifies differences in the systems, differences in bond-lengths,
+and other quantities, such as the Root-Mean-Square and average atomic
+position differences.
+
+If ```LET`` <let.html>`__ is present, then hydrogen atoms that are
+equivalent in the two systems, but have different names, will be treated
+as if they were equivalent.  Normally, these atoms would be excluded
+from the analysis, but it's useful to include them when different steps
+in a reaction mechanism are being compared. This is particularly useful
+when hydrogen atoms (protons or hydride ions) migrate from one atom to
+another, for example when a hydroxyl group ionizes.
+
+Procedure (`General <#General>`__ - `Systems <#Systems>`__ - `Lines 2 and 3 <#Lines_2_and_3>`__)
+------------------------------------------------------------------------------------------------
+
+General
+~~~~~~~
+
+The recommended way to use ``COMPARE``\ is to use a data set, e.g.
+"compare the geometries of system-A and system-B.mop", that contains
+three lines of the type:
+
+::
+
+   COMPARE geo_dat="System A" geo_ref="System B" output
+   Text to be displayed
+   Second line of text to be displayed (Optional)
+
+In this form, with ```OUTPUT`` <output.html>`__ present, the amount of
+output is minimized and only data related to the comparison is printed. 
+A web-page in ```HTML`` <HTML.html>`__, e.g., "compare the geometries of
+system-A and system-B.html", is written that allows a very rapid visual
+comparison of features.
+
+Systems
+~~~~~~~
+
+The text "System A" and "System B" should be replaced with the
+file-names for the systems of interest. For example, to compare a
+protein system "1A1A PDB structure.mop" and "1A1A optimized.arc" the
+first line would consist of:
+
+::
+
+   COMPARE geo_dat="1A1A optimized.arc" geo_ref="1A1A PDB structure.mop" output
+   Compare original PDB structure and optimized geometry for system 1A1A 
+
+Do not use PDB files that are in the current directory - if they were to
+be used, then they would be over-written by the run.  Instead, either
+re-name the file from <file>.pdb to <file>.ent, or have the PDB file in
+a different directory, and add the path or relative path to that
+directory, thus:
+
+::
+
+   geo_ref="C:/Users/name/Original PDB files/1A1A.pdb (for Windows) or geo_ref="/Users/name/Original PDB files/1A1A.pdb" (for Linux)
+
+or
+
+::
+
+   geo_ref="../Original PDB files/1A1A.pdb" 
+
+Other keywords used
+~~~~~~~~~~~~~~~~~~~
+
+```NOSWAP`` <noswap.html>`__: By default, atoms can be swapped in the
+```GEO_REF`` <geo_ref.html>`__ data-set if that would increase the
+overlap with the ```GEO_DAT`` <geo_dat.html>`__ data set.  To prevent
+this swapping, add ``NOSWAP``.
+
+``NOREOR:`` Do not move the ``GEO_REF`` system to minimize the
+difference between it and the ``GEO_DAT`` system.
+
+```OUTPUT`` <output.html>`__: Not essential, but reduced the size of the
+output, and allows the output of interest to be found more rapidly
+
+Optional, but useful.  This line will be displayed in the HTML web-page,
+and an informative description of the system can be very helpful later
+on when several web-pages are being used.
+
+Lines 2 and 3
+~~~~~~~~~~~~~
+
+Optional.  These lines will also be displayed in the HTML web-page. 
+
+Analysis
+--------
+
+"**Differences in atoms sets**" - Self-explanatory.   Have a quick look
+at the differences, and if nothing unexplained is seen, ignore this
+section.
+
+"**Number of atoms**" - Self-explanatory. 
+
+"**After docking - Atoms that move a lot**" - This list is in order of
+decreasing motion.  The first entry is the atom that shows the largest
+motion in going from one system to the other.  A useful operation would
+be to open the HTML web-page generated by the run, and look at some of
+the atoms that move a lot.
+
+**"Residues that move a lot and their (Movement in Angstroms per atom)"
+-** This list is in order of decreasing motion.  The first entry is the
+residue that shows the largest motion in going from one system to the
+other.
+
+In the next few entries, the assumption is made that one geometry is a
+reference, e.g., a PDB file downloaded from the internet, and the other
+is a geometry optimized using MOPAC.
+
+| "**Difference between GEO_DAT and GEO_REF:**"
+|  "total" is the sum of the differences in atom positions.
+|  "Average" is "total" divided by the number of atoms.
+|  "RMS, in Angstroms" is the root-mean-square of the differences
+  between the two geometries.  This is strictly comparable with the RMSD
+  quantities reported in other fields of protein structural chemistry,
+  e.g., different PDB reports on the same system.
+
+In the HTML file, "Diff." is the same as the "total" in the output file,
+and "RMSD" is the same as "RMS" in the output file.
+
+"**Differences between bond-lengths for the two geometries**" - This is
+important.  There are three common reasons for large (greater than 0.05
+or 4%) differences in bond-length: (A) faults in the PDB structure, (B)
+faults in the computational method being used, e.g., PM7 with COSMO, and
+(C) incorrect hydrogenation resulting in a local fault in the chemical
+structure.  To identify where the fault lies, examine the bond using the
+HTML web-page.  In order to get a better view of the fault, display only
+the local environment of the two atoms. If the fault is identified as
+(A), ignore the fault - it was corrected by the geometry optimization. 
+If (B), also ignore the fault, but make a note that this is a fault in
+the method being used, and might be important.  If you think it is
+important, try using a different method, e.g., PM6-D3H4 with COSMO. 
+
+Most PDB structures do not include hydrogen atoms, and do not
+distinguish between the carboxylic acid C-O distances or between
+arginine CZ and (NH1 or NH2) distances. When a geometry is optimized,
+pairs of C-O and C-N bonds that PDB reports are the same length will be
+predicted to have distinctly different lengths, one will be a single
+bond and the other a double bond. This causes a difference in
+bond-lengths to be reported, but these differences are not a result of a
+fault in either the PDB or the semiempirical structure.  Instead, these
+differences should be ignored. For example, the following Table lists
+the pairs of atoms that show the largest differences in bond-lengths. 
+All the atom-pairs that involve carboxylate atoms, e.g. GLU CD and (OE1
+or OE2), ASP CG and (OD1 or OD2) or guanidine atoms in ARG  CZ and (NH1
+or NH2) should be ignored. 
+
+Both PM6 and PM7 over-estimate the peptide C-N bond-length by about 0.08
+Å, at about 1.37 instead of the expected 1.29 Å.
+
+As a worked example, look at the Table
+
+.. raw:: html
+
+   <div align="center">
+
++-----------------------------------------------------------------------+
+| **Table showing differences in bond-lengths between PDB and           |
+| calculated geometries**                                               |
++-----------------------------------------------------------------------+
+| ::                                                                    |
+|                                                                       |
+|                                 Differences between bond-lengths for  |
+| the two geometries                                                    |
+|                                                                       |
+|               Diff.                 Atom 1                       Atom |
+|  2                  Bond length      Bond length                      |
+|                                                                       |
+|                                                                       |
+| ::                                                                    |
+|                                                                       |
+|                                                                       |
+|                    in GEO_DAT      in GEO_REF                         |
+|       1       0.148     O(ATOM    524  OE2 GLU A  37)    C(ATOM    52 |
+| 2  CD  GLU A  37)      1.368            1.219                         |
+|       2       0.139     O(ATOM   1086  OD2 ASP A  74)    C(ATOM   108 |
+| 4  CG  ASP A  74)      1.348            1.209                         |
+|       3       0.112     N(ATOM   3864  NH1 ARG A 258)    C(ATOM   386 |
+| 3  CZ  ARG A 258)      1.436            1.324                         |
+|       4       0.111     O(ATOM   3432  OE2 GLU A 231)    C(ATOM   343 |
+| 0  CD  GLU A 231)      1.349            1.238                         |
+|       5       0.109     N(ATOM   1513  NH1 ARG A 100)    C(ATOM   151 |
+| 2  CZ  ARG A 100)      1.423            1.314                         |
+|       6       0.102     N(ATOM   3930  NE  ARG A 262)    C(ATOM   393 |
+| 1  CZ  ARG A 262)      1.438            1.336                         |
+|       7       0.100     N(ATOM   3175  NE  ARG A 216)    C(ATOM   317 |
+| 6  CZ  ARG A 216)      1.413            1.313                         |
+|       8       0.097     O(ATOM    523  OE1 GLU A  37)    C(ATOM    52 |
+| 2  CD  GLU A  37)      1.216            1.314                         |
+|       9       0.096     N(ATOM    932  N   GLN A  64)    C(ATOM    91 |
+| 3  C   TYR A  63)      1.391            1.295                         |
+|      10       0.094     N(ATOM   1511  NE  ARG A 100)    C(ATOM   151 |
+| 2  CZ  ARG A 100)      1.413            1.319                         |
+|      11       0.092     N(ATOM   1961  NH1 ARG A 132)    C(ATOM   196 |
+| 0  CZ  ARG A 132)      1.422            1.330                         |
+|      12       0.091     N(ATOM    315  N   ASN A  23)    C(ATOM    30 |
+| 7  C   ALA A  22)      1.385            1.294                         |
+|      13       0.090     N(ATOM   1355  NH1 ARG A  91)    C(ATOM   135 |
+| 4  CZ  ARG A  91)      1.410            1.320                         |
+|      14       0.089     N(ATOM   3729  N   THR A 250)    C(ATOM   371 |
+| 1  C   PHE A 249)      1.378            1.288                         |
+|      15       0.087     N(ATOM   1016  N   GLU A  70)    C(ATOM   101 |
+| 1  C   GLY A  69)      1.400            1.313                         |
+|      16       0.086     N(ATOM   3177  NH1 ARG A 216)    C(ATOM   317 |
+| 6  CZ  ARG A 216)      1.420            1.335                         |
+|      17       0.086     N(ATOM   3125  N   THR A 213)    C(ATOM   310 |
+| 8  C   ILE A 212)      1.379            1.293                         |
+|      18       0.081     N(ATOM   3841  N   THR A 257)    C(ATOM   383 |
+| 2  C   SER A 256)      1.406            1.325                         |
+|      19       0.081     O(ATOM   3431  OE1 GLU A 231)    C(ATOM   343 |
+| 0  CD  GLU A 231)      1.227            1.308                         |
+|      20       0.081     N(ATOM    580  N   THR A  42)    C(ATOM    57 |
+| 5  C   GLY A  41)      1.379            1.298                         |
+|      21       0.080     N(ATOM   3492  N   GLU A 235)    C(ATOM   348 |
+| 0  C   PRO A 234)      1.378            1.298                         |
+|      22       0.080     N(ATOM   1959  NE  ARG A 132)    C(ATOM   196 |
+| 0  CZ  ARG A 132)      1.417            1.337                         |
+|      23       0.080     N(ATOM    305  N   ALA A  22)    C(ATOM    30 |
+| 0  C   GLY A  21)      1.390            1.310                         |
+|      24       0.080     N(ATOM    679  N   VAL A  48)    C(ATOM    66 |
+| 4  C   HIS A  47)      1.372            1.292                         |
+|      25       0.080     N(ATOM   1822  NE2 HIS A 122)    C(ATOM   182 |
+| 3  CE1 HIS A 122)      1.404            1.324                         |
++-----------------------------------------------------------------------+
+
+.. raw:: html
+
+   </div>
+
+Although this is a typical set of differences, every one of them falls
+into one or other of the types described above.
+
+IMPORTANT:   If the fault is caused by incorrect hydrogenation, than
+edit the optimized geometry to correct the fault, and re-run the
+geometry optimization.  Then re-run the comparison to verify that the
+fault has been corrected. Incorrect hydrogenation most often occurs in
+substrates and hetero-groups such as heme rings. A lot of grief can be
+avoided by looking at differences in bond-lengths and checking for
+hydrogenation errors. For examples of PDB files that have severe errors
+in bond-lengths, see `Preparing a starting data
+set <preparing_a_Starting_data_set.html>`__.
+
+Other global data such as the date, heats of formation, number of atoms,
+etc., are printed in the output and in the HTML web-page.
+
+ 
+
+ 
