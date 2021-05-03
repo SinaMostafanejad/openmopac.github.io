@@ -1,0 +1,891 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OPEN(n1,n2) &mdash; MOPAC  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OPT, OPT-X" href="OPT.html" />
+    <link rel="prev" title="OMIN=n.nn" href="OMIN.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #fcfcfc" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo-buffered.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basics.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Use Cases &amp; Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../keywords.html">Keywords</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="list_num.html">#</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ampersand.html"><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plus.html"><code class="docutils literal notranslate"><span class="pre">+</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="plusplus.html"><code class="docutils literal notranslate"><span class="pre">++</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plusplus.html#why-this-keyword-is-needed">Why this keyword is needed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plusplus.html#how-to-use">How to use “++”</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="0SCF.html"><code class="docutils literal notranslate"><span class="pre">0SCF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="1ELECTRON.html"><code class="docutils literal notranslate"><span class="pre">1ELECTRON</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="1SCF.html"><code class="docutils literal notranslate"><span class="pre">1SCF</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_A.html">A</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="A0.html"><code class="docutils literal notranslate"><span class="pre">A0</span></code> or<code class="docutils literal notranslate"><span class="pre">ANGSTROMS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ADD-H.html"><code class="docutils literal notranslate"><span class="pre">ADD-H</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ADD-H.html#recommended-usage">Recommended usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ADD-H.html#detecting-faults-in-hydrogenation">Detecting faults in hydrogenation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="AIDER.html"><code class="docutils literal notranslate"><span class="pre">AIDER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AIGIN.html"><code class="docutils literal notranslate"><span class="pre">AIGIN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AIGOUT.html"><code class="docutils literal notranslate"><span class="pre">AIGOUT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ALLBONDS.html">ALLBONDS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ALLVEC.html"><code class="docutils literal notranslate"><span class="pre">ALLVEC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AM1.html"><code class="docutils literal notranslate"><span class="pre">AM1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ANGSTROMS.html"><code class="docutils literal notranslate"><span class="pre">A0</span></code> or<code class="docutils literal notranslate"><span class="pre">ANGSTROMS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AUTOSYM.html"><code class="docutils literal notranslate"><span class="pre">AUTOSYM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="AUX.html"><code class="docutils literal notranslate"><span class="pre">AUX[([n][,][COMP][,][PRECISION=m][,][MOS=n][,][XP][,][XS][,][XW])]</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_B.html">B</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="BANANA.html"><code class="docutils literal notranslate"><span class="pre">RABBIT</span> <span class="pre">and</span> <span class="pre">BANANA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BAR.html"><code class="docutils literal notranslate"><span class="pre">BAR=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BCC.html"><code class="docutils literal notranslate"><span class="pre">BCC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BFGS.html"><code class="docutils literal notranslate"><span class="pre">BFGS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BIGCYCLES.html"><code class="docutils literal notranslate"><span class="pre">BIGCYCLES=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BIRADICAL.html"><code class="docutils literal notranslate"><span class="pre">BIRADICAL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BONDS.html"><code class="docutils literal notranslate"><span class="pre">BONDS</span> <span class="pre">ALLBONDS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="BRZ.html">Not Found</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_C.html">C</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CdotAdotSdot.html"><code class="docutils literal notranslate"><span class="pre">C.A.S=n,</span> <span class="pre">C.A.S.=(n,m)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CdotIdot.html"><code class="docutils literal notranslate"><span class="pre">C.I.=(n,m)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CdotIdotDdot.html"><code class="docutils literal notranslate"><span class="pre">C.I.D=n,</span> <span class="pre">C.I.D.=(n,m)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CAMP.html"><code class="docutils literal notranslate"><span class="pre">CAMP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CARTAB.html"><code class="docutils literal notranslate"><span class="pre">CARTAB</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHAINS.html"><code class="docutils literal notranslate"><span class="pre">CHAINS=(text)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHARGE.html"><code class="docutils literal notranslate"><span class="pre">CHARGE=n</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CHARGE.html#mozyme-mozyme-html-specific-definition-of-charge"><code class="docutils literal notranslate"><span class="pre">`MOZYME</span></code> &lt;mozyme.html&gt;`__-specific definition of <code class="docutils literal notranslate"><span class="pre">CHARGE:</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CHARGES.html"><code class="docutils literal notranslate"><span class="pre">CHARGES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHARST.html"><code class="docutils literal notranslate"><span class="pre">CHARST</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CHECK.html"><code class="docutils literal notranslate"><span class="pre">CHECK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CIS.html"><code class="docutils literal notranslate"><span class="pre">CIS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CISD.html"><code class="docutils literal notranslate"><span class="pre">CISD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CISDT.html"><code class="docutils literal notranslate"><span class="pre">CISDT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="COMPARE.html"><code class="docutils literal notranslate"><span class="pre">COMPARE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="COMPARE.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="COMPARE.html#procedure-general-systems-lines-2-and-3">Procedure (General - Systems - Lines 2 and 3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="COMPARE.html#analysis">Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="COMPFG.html"><code class="docutils literal notranslate"><span class="pre">COMPFG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="COSCCH.html"><code class="docutils literal notranslate"><span class="pre">COSCCH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="COSWRT.html"><code class="docutils literal notranslate"><span class="pre">COSWRT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CUTOFF.html"><code class="docutils literal notranslate"><span class="pre">CUTOFF=n.nn</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CUTOFF.html#cutof1-n-nn"><code class="docutils literal notranslate"><span class="pre">CUTOF1=n.nn</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="CUTOFF.html#cutof2-n-nn"><code class="docutils literal notranslate"><span class="pre">CUTOF2=n.nn</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CUTOFP.html"><code class="docutils literal notranslate"><span class="pre">CUTOFP=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CUTOFS.html"><code class="docutils literal notranslate"><span class="pre">CUTOFS=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="CVB.html"><code class="docutils literal notranslate"><span class="pre">CVB(text)</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CVB.html#special-case-of-o-o-bonds">Special case of O-O bonds.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CVB.html#intermediates-in-enzyme-mechanisms">Intermediates in Enzyme Mechanisms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CYCLES.html"><code class="docutils literal notranslate"><span class="pre">CYCLES=n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_D.html">D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="DAMP.html"><code class="docutils literal notranslate"><span class="pre">DAMP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DATA.html"><code class="docutils literal notranslate"><span class="pre">DATA=&quot;&lt;text&gt;&quot;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DCART.html"><code class="docutils literal notranslate"><span class="pre">DCART</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DDMAX.html"><code class="docutils literal notranslate"><span class="pre">DDMAX=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DDMIN.html"><code class="docutils literal notranslate"><span class="pre">DDMIN=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DEBUG.html"><code class="docutils literal notranslate"><span class="pre">DEBUG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DEBUGPULAY.html"><code class="docutils literal notranslate"><span class="pre">DEBUGPULAY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DENOUT.html"><code class="docutils literal notranslate"><span class="pre">DENOUT,</span> <span class="pre">DENOUTF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DENSITY.html"><code class="docutils literal notranslate"><span class="pre">DENSITY</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DENSITY.html#excited-state-density-matrices">Excited state density matrices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="DERI1.html"><code class="docutils literal notranslate"><span class="pre">DERI1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DERI2.html"><code class="docutils literal notranslate"><span class="pre">DERI2</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DERITR.html"><code class="docutils literal notranslate"><span class="pre">DERITR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DERIV.html"><code class="docutils literal notranslate"><span class="pre">DERIV</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DERNVO.html"><code class="docutils literal notranslate"><span class="pre">DERNVO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DFORCE.html"><code class="docutils literal notranslate"><span class="pre">DFORCE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DFP.html"><code class="docutils literal notranslate"><span class="pre">DFP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DIPOLE.html"><code class="docutils literal notranslate"><span class="pre">DIPOLE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DIPOLE.html"><code class="docutils literal notranslate"><span class="pre">DIPOLE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DIPX.html"><code class="docutils literal notranslate"><span class="pre">DIPX=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DIPY.html"><code class="docutils literal notranslate"><span class="pre">DIPY=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DIPZ.html"><code class="docutils literal notranslate"><span class="pre">DIPZ=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DISEX.html"><code class="docutils literal notranslate"><span class="pre">DISEX=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DISP.html"><code class="docutils literal notranslate"><span class="pre">DISP,</span> <span class="pre">DISP(n.nn)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DMAX.html"><code class="docutils literal notranslate"><span class="pre">DMAX=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DOUBLET.html"><code class="docutils literal notranslate"><span class="pre">DOUBLET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DRC.html"><code class="docutils literal notranslate"><span class="pre">DRC=n.nnn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="DUMP.html"><code class="docutils literal notranslate"><span class="pre">DUMP=nn.nn</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_E.html">E</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ECHO.html"><code class="docutils literal notranslate"><span class="pre">ECHO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EF.html"><code class="docutils literal notranslate"><span class="pre">EF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EIGEN.html"><code class="docutils literal notranslate"><span class="pre">EIGEN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EIGS.html"><code class="docutils literal notranslate"><span class="pre">EIGS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EPS.html"><code class="docutils literal notranslate"><span class="pre">EPS=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ESP.html"><code class="docutils literal notranslate"><span class="pre">ESP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ESPGRID.html"><code class="docutils literal notranslate"><span class="pre">ESPGRID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ESR.html"><code class="docutils literal notranslate"><span class="pre">ESR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="EXCITED.html">EXCITED</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EXTERNAL.html">INDO/S parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EXTERNAL.html#global-parameters">Global parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_F.html">F</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="FIELD.html"><code class="docutils literal notranslate"><span class="pre">FIELD=(n.nn,m.mm,l.ll)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FILL.html"><code class="docutils literal notranslate"><span class="pre">FILL=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLEPO.html"><code class="docutils literal notranslate"><span class="pre">FLEPO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FMAT.html"><code class="docutils literal notranslate"><span class="pre">FMAT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FOCK.html"><code class="docutils literal notranslate"><span class="pre">FOCK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="FORCE.html"><code class="docutils literal notranslate"><span class="pre">FORCE</span> <span class="pre">and FORCETS</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="FORCE.html#forcets">FORCETS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="FREQCY.html"><code class="docutils literal notranslate"><span class="pre">FREQCY</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_G.html">G</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GEO-OK.html">GEO-OK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GEO_DAT.html"><code class="docutils literal notranslate"><span class="pre">GEO_REF=&quot;text&quot;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GEO_DAT.html#requirements">Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_DAT.html#comparing-geometries">Comparing geometries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_DAT.html#improving-x-ray-geometries">Improving X-ray geometries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_DAT.html#locating-transition-states">Locating transition states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_DAT.html#error-fault-detected-in-atom-labels-in-a-geo-ref-run">Error: “Fault detected in atom labels in a GEO_REF run”</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GEO_REF.html"><code class="docutils literal notranslate"><span class="pre">GEO_REF=&quot;text&quot;</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GEO_REF.html#requirements">Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_REF.html#comparing-geometries">Comparing geometries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_REF.html#improving-x-ray-geometries">Improving X-ray geometries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_REF.html#locating-transition-states">Locating transition states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GEO_REF.html#error-fault-detected-in-atom-labels-in-a-geo-ref-run">Error: “Fault detected in atom labels in a GEO_REF run”</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GNORM.html"><code class="docutils literal notranslate"><span class="pre">GNORM=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRADIENTS.html"><code class="docutils literal notranslate"><span class="pre">GRADIENTS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRAPH.html"><code class="docutils literal notranslate"><span class="pre">GRAPH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRAPH.html#graphf"><code class="docutils literal notranslate"><span class="pre">GRAPHF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRAPHF.html"><code class="docutils literal notranslate"><span class="pre">GRAPH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="GRAPHF.html#id1"><code class="docutils literal notranslate"><span class="pre">GRAPHF</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_H.html">H</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="H-PRIORITY.html"><code class="docutils literal notranslate"><span class="pre">H-PRIORITY=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HCORE.html"><code class="docutils literal notranslate"><span class="pre">HCORE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HESS.html"><code class="docutils literal notranslate"><span class="pre">HESS=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HESSIAN.html"><code class="docutils literal notranslate"><span class="pre">HESSIAN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="HTML.html"><code class="docutils literal notranslate"><span class="pre">HTML</span></code> <code class="docutils literal notranslate"><span class="pre">HTML(NORES)</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="HTML.html#animations">Animations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="HTML.html#requirements-for-displaying-and-editing-a-protein-using-jsmol">Requirements for displaying and editing a protein using JSmol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="HYPERFINE.html"><code class="docutils literal notranslate"><span class="pre">HYPERFINE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_I.html">I</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="INDO.html"><code class="docutils literal notranslate"><span class="pre">INDO</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="INDO.html#advantages-of-adding-indo-s">Advantages of adding INDO/S</a></li>
+<li class="toctree-l4"><a class="reference internal" href="INDO.html#details-to-be-aware-of-when-using-indo">Details to be aware of when using INDO</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="INT.html"><code class="docutils literal notranslate"><span class="pre">INT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="INVERT.html"><code class="docutils literal notranslate"><span class="pre">INVERT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONIZE.html"><code class="docutils literal notranslate"><span class="pre">IONIZE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="IRC.html"><code class="docutils literal notranslate"><span class="pre">IRC=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ISOTOPE.html"><code class="docutils literal notranslate"><span class="pre">ISOTOPE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ITER.html"><code class="docutils literal notranslate"><span class="pre">ITER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ITRY.html"><code class="docutils literal notranslate"><span class="pre">ITRY=nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="IUPD.html"><code class="docutils literal notranslate"><span class="pre">IUPD=n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_J.html">J</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_K.html">K</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="KINETIC.html"><code class="docutils literal notranslate"><span class="pre">KINETIC=n.nnn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="KING.html"><code class="docutils literal notranslate"><span class="pre">KING</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_L.html">L</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LARGE.html"><code class="docutils literal notranslate"><span class="pre">LARGE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LBFGS.html">LBFGS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="LBFGS.html#note-on-use-of-l-bfgs-with-large-systems-particularly-proteins">Note on use of L-BFGS with large systems, particularly proteins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LBFGS.html#notes-on-the-l-bfgs-optimization-method">Notes on the L-BFGS optimization method</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="LET.html"><code class="docutils literal notranslate"><span class="pre">LET,</span> <span class="pre">LET(nnn)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LEWIS.html"><code class="docutils literal notranslate"><span class="pre">LEWIS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LINMIN.html"><code class="docutils literal notranslate"><span class="pre">LINMIN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LOCAL.html"><code class="docutils literal notranslate"><span class="pre">LOCAL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="LOCATE-TS.html"><code class="docutils literal notranslate"><span class="pre">LOCATE-TS,</span> <span class="pre">LOCATE-TS(C:[n.nn[,n.nn[,n.nn...]]][;Set:m])</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="LOCATE-TS.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LOCATE-TS.html#advice-on-usinglocate-ts">Advice on using<code class="docutils literal notranslate"><span class="pre">LOCATE-TS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="LOCATE-TS.html#worked-exercise-in-locating-a-transition-state">Worked exercise in locating a transition state.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LOCATE-TS.html#how-locate-ts-works">How  LOCATE-TS works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LOCATE-TS.html#options-for-locate-ts">Options for LOCATE-TS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LOCATE-TS.html#when-things-go-wrong">When Things Go Wrong</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="LOG.html"><code class="docutils literal notranslate"><span class="pre">LOG</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_M.html">M</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MAXCI.html"><code class="docutils literal notranslate"><span class="pre">MAXCI=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MECI.html"><code class="docutils literal notranslate"><span class="pre">MECI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MERS.html"><code class="docutils literal notranslate"><span class="pre">MERS=(n1) ``</span> <span class="pre"> or</span> <span class="pre">`` </span> <span class="pre">MERS=(n1,n2)</span></code>    or   `` MERS=(n1,n2,n3)``</a></li>
+<li class="toctree-l3"><a class="reference internal" href="METAL.html"><code class="docutils literal notranslate"><span class="pre">METAL[=(a[,b[,c[...]]])]</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="METAL.html#when-adding-hydrogen-atoms-using-add-h-add-h-html">When adding hydrogen atoms using <code class="docutils literal notranslate"><span class="pre">`ADD-H</span></code> &lt;ADD-H.html&gt;`__</a></li>
+<li class="toctree-l4"><a class="reference internal" href="METAL.html#in-lewis-structures-for-mozyme-calculations">In Lewis structures for MOZYME calculations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="MICROS.html"><code class="docutils literal notranslate"><span class="pre">MICROS=n</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MICROS.html#format-for-microstates">Format for Microstates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="MINI.html"><code class="docutils literal notranslate"><span class="pre">MINI</span></code><sup>‡</sup></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MINMEP.html"><code class="docutils literal notranslate"><span class="pre">MINMEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MMOK.html"><code class="docutils literal notranslate"><span class="pre">MMOK</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MNDO.html"><code class="docutils literal notranslate"><span class="pre">MNDO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MNDOD.html"><code class="docutils literal notranslate"><span class="pre">MNDOD</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MODE.html"><code class="docutils literal notranslate"><span class="pre">MODE=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOLDAT.html"><code class="docutils literal notranslate"><span class="pre">MOLDAT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOLSYM.html"><code class="docutils literal notranslate"><span class="pre">MOLSYM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOL_QMMM.html"><code class="docutils literal notranslate"><span class="pre">QMMM</span></code> (Alt.: <code class="docutils literal notranslate"><span class="pre">MOL_QMMM</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOL_QMMM.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MOL_QMMM.html#format-of-mol-in">Format of MOL.IN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="MOL_QMMM.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOL_QMMM.html#use-of-mopac-standard-output-aux-file">Use of MOPAC standard output AUX file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOL_QMMM.html#applications-computational-cost-and-accuracy">Applications, computational cost and accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOL_QMMM.html#additional-technical-details">Additional technical details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOPAC.html"><code class="docutils literal notranslate"><span class="pre">MOPAC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MOZYME.html">MOZYME</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MOZYME.html#notes-warnings-and-cautions-concerning-mozyme-calculations">Notes, warnings and cautions concerning MOZYME calculations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MOZYME.html#memory-considerations"><strong>Memory considerations:</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="MOZYME.html#limitations-of-mozyme">Limitations of MOZYME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MOZYME.html#in-some-cases-the-mozyme-scf-solution-is-incorrect">In some cases, the MOZYME SCF solution is incorrect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MOZYME.html#recommended-use-of-mozyme">Recommended use of MOZYME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MOZYME.html#examplex-of-calculations-involving-proteins">Examplex of calculations involving proteins</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="MRCI.html"><code class="docutils literal notranslate"><span class="pre">MRCI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MS.html"><code class="docutils literal notranslate"><span class="pre">MS=n[.0,.5]</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="MULLIK.html"><code class="docutils literal notranslate"><span class="pre">MULLIK</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_N.html">N</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Nstarstar2.html"><code class="docutils literal notranslate"><span class="pre">N**2=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NLLSQ.html">NLLSQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOANCI.html">NOANCI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOCOMMENTS.html"><code class="docutils literal notranslate"><span class="pre">NOCOMMENTS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOGPU.html">NOGPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOLOG.html"><code class="docutils literal notranslate"><span class="pre">NOLOG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOMM.html"><code class="docutils literal notranslate"><span class="pre">NOMM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NONET.html"><code class="docutils literal notranslate"><span class="pre">NONET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NONR.html"><code class="docutils literal notranslate"><span class="pre">NONR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOOPT.html"><code class="docutils literal notranslate"><span class="pre">NOOPT,</span> <span class="pre">NOOPT-X</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOREOR.html"><code class="docutils literal notranslate"><span class="pre">NOREOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NORESEQ.html"><code class="docutils literal notranslate"><span class="pre">NORESEQ</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOSWAP.html"><code class="docutils literal notranslate"><span class="pre">NOSWAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOSYM.html"><code class="docutils literal notranslate"><span class="pre">NOSYM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOTER.html"><code class="docutils literal notranslate"><span class="pre">NOSYM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOTHIEL.html"><code class="docutils literal notranslate"><span class="pre">NOTHIEL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOTXT.html"><code class="docutils literal notranslate"><span class="pre">NOTXT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NOXYZ.html"><code class="docutils literal notranslate"><span class="pre">NOXYZ</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NSPA.html"><code class="docutils literal notranslate"><span class="pre">NSPA=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="NSURF.html"><code class="docutils literal notranslate"><span class="pre">NSURF</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="list_O.html">O</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="OCTET.html"><code class="docutils literal notranslate"><span class="pre">OCTET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OLDCAV.html"><code class="docutils literal notranslate"><span class="pre">OLDCAV</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OLDENS.html"><code class="docutils literal notranslate"><span class="pre">OLDENS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OLDFPC.html"><code class="docutils literal notranslate"><span class="pre">OLDFPC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OLDGEO.html"><code class="docutils literal notranslate"><span class="pre">OLDGEO</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OMIN.html"><code class="docutils literal notranslate"><span class="pre">OMIN=n.nn</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OPT.html"><code class="docutils literal notranslate"><span class="pre">OPT,</span> <span class="pre">OPT-X</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OPT.html"><code class="docutils literal notranslate"><span class="pre">OPT,</span> <span class="pre">OPT-X</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="OUTPUT.html"><code class="docutils literal notranslate"><span class="pre">OUTPUT</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_P.html">P</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="P.html"><code class="docutils literal notranslate"><span class="pre">P=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PDB.html"><code class="docutils literal notranslate"><span class="pre">PDB=(text)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PDB.html"><code class="docutils literal notranslate"><span class="pre">PDB=(text)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PDBOUT.html"><code class="docutils literal notranslate"><span class="pre">PDBOUT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PECI.html"><code class="docutils literal notranslate"><span class="pre">PECI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PI.html"><code class="docutils literal notranslate"><span class="pre">PI</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PKA.html"><code class="docutils literal notranslate"><span class="pre">pKa</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PL.html"><code class="docutils literal notranslate"><span class="pre">PL</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="PL.html#definition-of-pls-for-conventional-scf-calculations">Definition of PLS for conventional SCF calculations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PL.html#definition-of-pls-for-mozyme-calculations">Definition of PLS for MOZYME calculations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="PM3.html"><code class="docutils literal notranslate"><span class="pre">PM3</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM6.html"><code class="docutils literal notranslate"><span class="pre">PM6</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM6-D3.html"><code class="docutils literal notranslate"><span class="pre">PM6-D3</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM6-D3H4.html"><code class="docutils literal notranslate"><span class="pre">PM6-D3H4</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM6-D3H4X.html"><code class="docutils literal notranslate"><span class="pre">PM6-D3H4X</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM6-DHplus.html"><code class="docutils literal notranslate"><span class="pre">PM6-DH+</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="PM6-DHplus.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="PM6-DH2.html"><code class="docutils literal notranslate"><span class="pre">PM6-DH2</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM6-DH2X.html"><code class="docutils literal notranslate"><span class="pre">PM6-DH2X</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM7.html"><code class="docutils literal notranslate"><span class="pre">PM7</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="PM7.html#notes-on-pm7">Notes on PM7</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="PM7-TS.html"><code class="docutils literal notranslate"><span class="pre">PM7-TS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PMEP.html"><code class="docutils literal notranslate"><span class="pre">PMEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PMEPR.html"><code class="docutils literal notranslate"><span class="pre">PMEPR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="POINT.html"><code class="docutils literal notranslate"><span class="pre">POINT(S)=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="POINT1.html"><code class="docutils literal notranslate"><span class="pre">POINT1=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="POINT2.html"><code class="docutils literal notranslate"><span class="pre">POINT2=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="POLAR.html"><code class="docutils literal notranslate"><span class="pre">POLAR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="POLAR.html#examples-of-polar-keyword">Examples of <code class="docutils literal notranslate"><span class="pre">POLAR</span></code> keyword</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="POTWRT.html"><code class="docutils literal notranslate"><span class="pre">POTWRT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="POWSQ.html"><code class="docutils literal notranslate"><span class="pre">POWSQ</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRECISE.html"><code class="docutils literal notranslate"><span class="pre">PRECISE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRESSURE.html"><code class="docutils literal notranslate"><span class="pre">P=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRNT.html"><code class="docutils literal notranslate"><span class="pre">PRNT=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRTCHAR.html"><code class="docutils literal notranslate"><span class="pre">PRTCHAR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRTINT.html"><code class="docutils literal notranslate"><span class="pre">PRTINT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRTMEP.html"><code class="docutils literal notranslate"><span class="pre">PRTMEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PRTXYZ.html"><code class="docutils literal notranslate"><span class="pre">PRTXYZ</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="PULAY.html"><code class="docutils literal notranslate"><span class="pre">PULAY</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_Q.html">Q</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="QMMM.html"><code class="docutils literal notranslate"><span class="pre">QMMM</span></code> (Alt.: <code class="docutils literal notranslate"><span class="pre">MOL_QMMM</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="QMMM.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="QMMM.html#format-of-mol-in">Format of MOL.IN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="QMMM.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="QMMM.html#use-of-mopac-standard-output-aux-file">Use of MOPAC standard output AUX file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="QMMM.html#applications-computational-cost-and-accuracy">Applications, computational cost and accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="QMMM.html#additional-technical-details">Additional technical details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="QPMEP.html"><code class="docutils literal notranslate"><span class="pre">QPMEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="QUARTET.html"><code class="docutils literal notranslate"><span class="pre">QUARTET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="QUINTET.html"><code class="docutils literal notranslate"><span class="pre">QUINTET</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_R.html">R</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RABBIT.html"><code class="docutils literal notranslate"><span class="pre">RABBIT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RAMA.html"><code class="docutils literal notranslate"><span class="pre">RAMA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RAPID.html"><code class="docutils literal notranslate"><span class="pre">RAPID</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RE-LOCAL.html"><code class="docutils literal notranslate"><span class="pre">RE-LOCAL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RECALC.html"><code class="docutils literal notranslate"><span class="pre">RECALC=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RELSCF.html"><code class="docutils literal notranslate"><span class="pre">RELSCF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="REORTHOG.html"><code class="docutils literal notranslate"><span class="pre">REORTH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RESEQ.html"><code class="docutils literal notranslate"><span class="pre">RESEQ</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RESEQ.html#compliance-with-pdb-conventions">Compliance with PDB conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RESIDUES.html"><code class="docutils literal notranslate"><span class="pre">RESIDUES[0]</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RESIDUES.html#residues0-preserves-the-original-atom-labels"><code class="docutils literal notranslate"><span class="pre">RESIDUES0</span></code> - preserves the original atom labels</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RESTART.html"><code class="docutils literal notranslate"><span class="pre">RESTART</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RHF.html"><code class="docutils literal notranslate"><span class="pre">RHF</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RM1.html"><code class="docutils literal notranslate"><span class="pre">RM1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RMAX.html"><code class="docutils literal notranslate"><span class="pre">RMAX=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RMIN.html"><code class="docutils literal notranslate"><span class="pre">RMIN=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ROOT.html"><code class="docutils literal notranslate"><span class="pre">ROOT=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RSCAL.html"><code class="docutils literal notranslate"><span class="pre">RSCAL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RSOLV.html"><code class="docutils literal notranslate"><span class="pre">RSOLV=n.nn</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_S.html">S</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SADDLE.html"><code class="docutils literal notranslate"><span class="pre">SADDLE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SCALE.html"><code class="docutils literal notranslate"><span class="pre">SCALE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SCFCRT.html"><code class="docutils literal notranslate"><span class="pre">SCFCRT=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SCINCR.html"><code class="docutils literal notranslate"><span class="pre">SCINCR=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SEPTET.html"><code class="docutils literal notranslate"><span class="pre">SEPTET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SETPI.html"><code class="docutils literal notranslate"><span class="pre">SETPI</span></code> or <code class="docutils literal notranslate"><span class="pre">SETPI=&lt;file&gt;.TXT</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SETPI.html#worked-example-of-guanine-anion">Worked example of Guanine anion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="SETUP.html"><code class="docutils literal notranslate"><span class="pre">SETUP</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SETUP.html#limitations-on-setup-names">Limitations on SETUP names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SETUP.html#use-in-recursive-jobs-example">Use in recursive jobs (Example)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="SEXTET.html"><code class="docutils literal notranslate"><span class="pre">SEXTET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SHIFT.html"><code class="docutils literal notranslate"><span class="pre">SHIFT=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SHUT.html">The SHUT command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SIGMA.html"><code class="docutils literal notranslate"><span class="pre">SIGMA</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SINGLET.html"><code class="docutils literal notranslate"><span class="pre">SINGLET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SITE.html">`` SITE=(text)``</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SITE.html#use-of-site-to">Use of <code class="docutils literal notranslate"><span class="pre">SITE</span></code> to:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="SLOG.html"><code class="docutils literal notranslate"><span class="pre">SLOG,</span> <span class="pre">SLOG=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SLOPE.html"><code class="docutils literal notranslate"><span class="pre">SLOPE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SMOOTH.html"><code class="docutils literal notranslate"><span class="pre">SMOOTH</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SNAP.html"><code class="docutils literal notranslate"><span class="pre">SNAP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SPARKLE.html"><code class="docutils literal notranslate"><span class="pre">SPARKLE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SPARKLE.html#f-orbitals">“f” Orbitals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="SPIN.html"><code class="docutils literal notranslate"><span class="pre">SPIN</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="START_RES.html"><code class="docutils literal notranslate"><span class="pre">START_RES(text)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="STATIC.html"><code class="docutils literal notranslate"><span class="pre">STATIC</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="STEP.html"><code class="docutils literal notranslate"><span class="pre">STEP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="STEP1.html"><code class="docutils literal notranslate"><span class="pre">STEP1=n.nnn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="STEP2.html"><code class="docutils literal notranslate"><span class="pre">STEP2=n.nnn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="STO3G.html"><code class="docutils literal notranslate"><span class="pre">STO3G</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SUPER.html"><code class="docutils literal notranslate"><span class="pre">SUPER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYBYL.html"><code class="docutils literal notranslate"><span class="pre">SYBYL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYMAVG.html"><code class="docutils literal notranslate"><span class="pre">SYMAVG</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYMMETRY.html"><code class="docutils literal notranslate"><span class="pre">SYMMETRY</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYMOIR.html"><code class="docutils literal notranslate"><span class="pre">SYMOIR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="SYMTRZ.html"><code class="docutils literal notranslate"><span class="pre">SYMTRZ</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_T.html">T</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="T.html"><code class="docutils literal notranslate"><span class="pre">T=n[M,H,D,W]</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="T-PRIORITY.html"><code class="docutils literal notranslate"><span class="pre">T-PRIORITY=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TDIP.html"><code class="docutils literal notranslate"><span class="pre">TDIP</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="THERMO.html"><code class="docutils literal notranslate"><span class="pre">THERMO(nnn,mmm,lll)</span></code> or <code class="docutils literal notranslate"><span class="pre">THERMO=(nnn,mmm,lll)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="THREADS.html"><code class="docutils literal notranslate"><span class="pre">THREADS=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TIMES.html"><code class="docutils literal notranslate"><span class="pre">TIMES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TRANS.html"><code class="docutils literal notranslate"><span class="pre">TRANS=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TRIPLET.html"><code class="docutils literal notranslate"><span class="pre">TRIPLET</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TS.html"><code class="docutils literal notranslate"><span class="pre">TS</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_U.html">U</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="UHF.html"><code class="docutils literal notranslate"><span class="pre">UHF</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_V.html">V</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VDW.html"><code class="docutils literal notranslate"><span class="pre">VDW(text)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VDWM.html"><code class="docutils literal notranslate"><span class="pre">VDWM(text)</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VECTORS.html"><code class="docutils literal notranslate"><span class="pre">VECTORS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="VELOCITY.html"><code class="docutils literal notranslate"><span class="pre">VELOCITY</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_W.html">W</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="WILLIAMS.html"><code class="docutils literal notranslate"><span class="pre">WILLIAMS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="WRTCI.html"><code class="docutils literal notranslate"><span class="pre">WRTCI=n</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="WRTCONF.html"><code class="docutils literal notranslate"><span class="pre">WRTCONF=n.nn</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_X.html">X</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="X-PRIORITY.html"><code class="docutils literal notranslate"><span class="pre">X-PRIORITY=n.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="XENO.html"><code class="docutils literal notranslate"><span class="pre">XENO</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="XENO.html#for-non-standard-residues-and-hetero-groups">For non-standard residues and hetero groups</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="XYZ.html"><code class="docutils literal notranslate"><span class="pre">XYZ</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_Y.html">Y</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="list_Z.html">Z</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Z.html"><code class="docutils literal notranslate"><span class="pre">Z=n</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../questions.html"><strong>F</strong>requently <strong>A</strong>sked <strong>Q</strong>uestions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../forum.html">Forum &amp; Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Accuracy &amp; Reference Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methodology.html">Theory &amp; Methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Background &amp; History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../impact.html">Scientific Impact</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../impact.html#id1">2021</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MOPAC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../keywords.html">Keywords</a> &raquo;</li>
+        
+          <li><a href="list_O.html">O</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/keywords/OPEN.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="open-n1-n2">
+<span id="open"></span><h1><code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code><a class="headerlink" href="#open-n1-n2" title="Permalink to this headline">¶</a></h1>
+<p><strong>RHF description:</strong> The M.O. occupancy during the SCF calculation can
+be defined in terms of doubly occupied, empty, and fractionally occupied
+M.O.s. By default, RHF SCF calculations are run using doubly occupied
+M.O.s, with, at most, one singly occupied M.O.  For some systems, the
+symmetry of the M.O.s can be preserved only if two or more M.O.s have
+fractional occupancies. Such fractional occupancies can be defined using
+<code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code>, where <em>n</em><sub>1</sub> = number of electrons in the
+open-shell manifold, and <em>n</em><sub>2</sub> = number of open-shell M.O.s;
+The ratio of <em>n</em><sub>1</sub> to <em>n</em><sub>2</sub> is restricted to  <em>2 &gt;
+n</em><sub>1</sub>/<em>n</em><sub>2</sub>  &gt; 0.  Example: if <code class="docutils literal notranslate"><span class="pre">OPEN(3,4)</span></code>were used
+then the occupancy near the HOMO-LUMO gap would be …2, 2, 2, 0.75,
+0.75, 0.75, 0.75, 0, 0, 0, …</p>
+<p>The two π M.O.s in  molecular oxygen would not be degenerate if a
+closed-shell SCF were run.  In order to maintain the degeneracy,
+<code class="docutils literal notranslate"><span class="pre">OPEN(2,2)</span></code> would need to be used.</p>
+<p>Do <em>not</em> use <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> for ground-state systems <em>except</em> for high
+symmetry systems with open shells, such as twisted (D:sub:<cite>2d</cite>)
+ethylene or molecular oxygen O<sub>2</sub>, or if there is a very small
+band-gap (such as in metal clusters).</p>
+<p>Examples of <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> are given in the Table. <code class="docutils literal notranslate"><span class="pre">OPEN(1,1)</span></code> will
+be assumed for odd-electron systems unless an <code class="docutils literal notranslate"><span class="pre">OPEN</span></code> keyword is used.
+Errors introduced by use of fractional occupancy are automatically
+corrected [<a class="reference external" href="references.html#136">136</a>] in a MECI calculation when
+<code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> is used. See also <code class="docutils literal notranslate"><span class="pre">C.I.=n</span></code>.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>OPEN(<em>n</em><sub>1</sub>,<em>n</em><sub>2</sub>) cannot be used instead of
+<code class="docutils literal notranslate"><span class="pre">C.I.=n2</span></code>. <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> modifies the SCF calculation, but
+<code class="docutils literal notranslate"><span class="pre">C.I.=n2</span></code> does not modify the SCF calculation. Both keywords cause
+a C.I. calculation to be done.</p></li>
+<li><p>Be careful to ensure that <em>n</em><sub>1</sub> is odd if the system has an
+odd number of electrons, and even if the system has an even number of
+electrons.</p></li>
+</ul>
+<p><strong>UHF description:</strong> The M.O. occupancy during the SCF calculation can
+be defined in terms of singly occupied, empty, and fractionally occupied
+M.O.s. By default, UHF SCF calculations are run using singly occupied
+M.O.s. When <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> is present, the highest <em>n2</em> α molecular
+orbitals are each given a population of <em>n</em><sub>1</sub>/<em>n2</em> electrons.
+To use <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> in a UHF calculation, <code class="docutils literal notranslate"><span class="pre">`UHF</span></code> &lt;uhf.html&gt;`__ must
+also be present.  Because fractional electrons are used, small errors in
+energy, on the order of 1-2 kcal/mol, are introduced when
+<code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code>is used.  These errors are <em>not</em> corrected by C.I.,
+however they are small and should not affect the results significantly.</p>
+<p>Because <code class="docutils literal notranslate"><span class="pre">OPEN</span></code> only applies to the α electrons, care must be exercised
+in defining the number of α and β electrons.  For example, if the cation
+of tetrahedral methane were to be calculated, the keywords needed would
+be “<code class="docutils literal notranslate"><span class="pre">OPEN(2,3)MS=-0.5</span>&#160; <span class="pre">UHF</span> <span class="pre">CHARGE=1&quot;</span> <span class="pre">If</span> <span class="pre">MS=-0.5</span></code> was not present, then
+there would be four α and three β electrons, instead of the required
+three α and four β electrons.</p>
+<p>The main use of <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code> in UHF calculations is to mimic the
+dynamic Jahn-Teller effect in transition metal complexes.  Without
+<code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code>an octahedral complex  system that could undergo
+Jahn-Teller distortion would be distorted.  However, in many X-ray
+structures, systems that should Jahn-Teller distort do not in fact
+distort and instead retain high symmetry, typically O<sub>h</sub>.  This
+high symmetry can be regarded as a dynamic J-T effect. Transition metal
+complexes are, as their name suggests, complicated, and correctly
+defining the various J-T states is also complicated.  The following set
+of examples is provided to illustrate how to define keywords for various
+octahedral systems.  These systems are assumed to have a three-fold
+degenerate set of “d” M.O.s, with dominant contributions from the
+<em>d</em>-orbitals <em>dxy</em>, <em>dyz</em>, <em>dxz</em>, that can be related to the
+<em>t2g</em> set of point group O<sub>h</sub>, and a two-fold degenerate set,
+composed mainly of the other two <em>d</em>-orbitals; these are equivalent to
+the * eg* set of point group O<sub>h</sub>.</p>
+<div class="line-block">
+<div class="line"><em>d</em><sup>0</sup>: No keyword needed - closed shell, i.e.,
+<sup>1</sup>A<sub>1g</sub>.*
+d*<sup>1</sup>: keywords: “<code class="docutils literal notranslate"><span class="pre">UHF</span> <span class="pre">OPEN(1,3)</span></code>”  One α <em>d</em> electron in a
+* t2g* set of M.O.s.  The resulting state is <sup>2</sup>T<sub>2g</sub>.</div>
+<div class="line"><em>d</em><sup>2</sup>: keywords: “<code class="docutils literal notranslate"><span class="pre">UHF</span> <span class="pre">OPEN(2,3)</span> <span class="pre">MS=1</span></code>”  Two α <em>d</em> electrons
+in a * t2g* set of M.O.s.  The resulting state is
+<sup>3</sup>T<sub>1g</sub>.</div>
+<div class="line"><em>d</em><sup>3</sup>: keywords: “<code class="docutils literal notranslate"><span class="pre">UHF</span> <span class="pre">MS=1.5</span></code>”  The state is
+<sup>4</sup>A<sub>2g</sub>.</div>
+<div class="line"><em>d</em><sup>4</sup>: keywords for low spin: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">OPEN(1,3)MS=-1</span></code>”
+Because <code class="docutils literal notranslate"><span class="pre">OPEN(n1,n2)</span></code>, applies only to α electrons, and because
+there are four electrons in a * t2g* set of M.O.s, the only way to
+have a fractional population of the α set of M.O.s is to have the β
+set filled, i.e., α<sup>1</sup>β<sup>3</sup> . By using “<code class="docutils literal notranslate"><span class="pre">MS=-1</span></code>” the
+number of  β electrons is defined as being two more than the number of
+α electrons  The resulting state is <sup>3</sup>T<sub>1g</sub>.*
+d*<sup>4</sup>: keywords for high spin: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">OPEN(1,2)</span> <span class="pre">MS=2</span></code>”  In
+high-spin <em>d</em><sup>4</sup> complexes, there are three α electrons in the
+<em>t2g</em>  set of M.O.s, and a single α electron in the two-fold
+degenerate <em>eg</em> M.O.  “<code class="docutils literal notranslate"><span class="pre">MS=2</span></code>” results in there being four more α
+than β electrons.  The resulting state is <sup>5</sup>E<sub>g</sub>.</div>
+<div class="line"><em>d</em><sup>5</sup>: keywords for low spin: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">OPEN(2,3)</span> <span class="pre">MS=-0.5</span></code>”  See
+<em>d</em><sup>4</sup> low spin. This gives rise to a  <sup>2</sup>T<sub>2g</sub>
+state.*
+d*<sup>5</sup>: keywords for high spin: “<code class="docutils literal notranslate"><span class="pre">UHF</span> <span class="pre">MS=2.5</span></code>”  The state is
+<sup>6</sup>A<sub>1g</sub>.</div>
+<div class="line"><em>d</em><sup>6</sup>: No keyword needed - closed shell, i.e.,
+<sup>1</sup>A<sub>1g</sub>.*
+d*<sup>6</sup>: keywords for high spin<code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">&quot;UHF</span> <span class="pre">OPEN(1,3)</span> <span class="pre">MS=-2</span></code>”* *
+The resulting state is <sup>5</sup>T<sub>2g</sub> = A<sub>2g</sub> (from the
+β<sup>2</sup> of e<sub>g</sub> symmetry)*A<sub>2g</sub> (from the
+β<sup>3</sup> of t<sub>2g</sub> symmetry)*T<sub>2g</sub> (from the
+α<sup>1</sup> of t<sub>2g</sub> symmetry).</div>
+<div class="line"><em>d</em><sup>7</sup>: keywords for low spin: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">OPEN(1,2)</span></code>”  As with
+<em>d</em><sup>1</sup>, the extra electron has, by default, α spin, and so the
+keyword “<code class="docutils literal notranslate"><span class="pre">MS=0.5</span></code>” is unnecessary.  The resulting state is
+<sup>2</sup>E<sub>g</sub>.*
+d*<sup>7</sup>: keywords for high spin: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">OPEN(1,2)</span> <span class="pre">MS=-1.5</span></code>”
+With seven d-electrons and  <code class="docutils literal notranslate"><span class="pre">MS=-1.5</span></code> there are three more α than β
+electrons, i.e., α<sup>2</sup>β<sup>5</sup>.  The resulting state is
+<sup>4</sup>T<sub>1g</sub>.</div>
+<div class="line"><em>d</em><sup>8</sup>: keywords: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">MS=1</span></code>”   The resulting state is
+<sup>3</sup>A<sub>2g</sub>.</div>
+<div class="line"><em>d</em><sup>9</sup>: keywords: <code class="docutils literal notranslate"><span class="pre">&quot;UHF</span> <span class="pre">OPEN(1,2)</span></code>”   The resulting state is
+<sup>2</sup>E<sub>g</sub>.</div>
+<div class="line"><em>d</em><sup>10</sup>: No keyword needed - closed shell, i.e.,
+<sup>1</sup>A<sub>1g</sub>.</div>
+</div>
+<p>A similar exercise could be done with the T<sub>d</sub> complexes. As this
+is simple, albeit tedious, it is left as an exercise.</p>
+<div align="center" style="float: left"><p><strong>Table:</strong> Use of <code class="docutils literal notranslate"><span class="pre">OPEN(n,m)</span></code></p>
+</div><p>UHF Keywords</p>
+<p>RHF Keywords</p>
+<p>Example</p>
+<p>Number of M.O.s</p>
+<p>No. of Electrons</p>
+<p>State</p>
+<p><code class="docutils literal notranslate"><span class="pre">MS=1</span></code></p>
+<hr class="docutils" />
+<p>OPEN(2,2)</p>
+<p>Twisted Ethylene</p>
+<p>2</p>
+<p>2</p>
+<p><sup>3</sup>A<sub>2</sub></p>
+<p><code class="docutils literal notranslate"><span class="pre">OPEN(1,2)</span></code></p>
+<hr class="docutils" />
+<p>OPEN(1,2)</p>
+<p>O<sub>2</sub><sup>+</sup></p>
+<p>2</p>
+<p>1</p>
+<p><sup>2</sup>π<sub>g</sub></p>
+<hr class="docutils" />
+<p>MS=-0.5 OPEN(2,3)</p>
+<hr class="docutils" />
+<p>OPEN(5,3)</p>
+<p>CH<sub>4</sub><sup>+</sup></p>
+<p>3</p>
+<p>5</p>
+<p><sup>2</sup>T<sub>2</sub></p>
+<p><code class="docutils literal notranslate"><span class="pre">MS=1.5</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">OPEN(3,3)</span></code></p>
+<p>[Cr:sup:<cite>III</cite>F<sub>6</sub>]<sup>3-</sup></p>
+<p>3</p>
+<p>3</p>
+<p><sup>4</sup>A<sub>2g</sub></p>
+<p><code class="docutils literal notranslate"><span class="pre">MS=2.5</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">OPEN(5,5)</span></code></p>
+<p>[Mn:sup:<cite>II</cite>(H2O):sub:<cite>6</cite>]<sup>2+</sup></p>
+<p>5</p>
+<p>5</p>
+<p><sup>6</sup>A<sub>1</sub></p>
+<p><code class="docutils literal notranslate"><span class="pre">MS=-0.5</span> <span class="pre">OPEN(2,3)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">OPEN(5,3)</span></code></p>
+<p>[Fe:sup:<cite>III</cite>(CN):sub:<cite>6</cite>]<sup>3-</sup></p>
+<p>3</p>
+<p>5</p>
+<p><sup>2</sup>T<sub>2g</sub></p>
+<div align="left"><p>+–+
+|  |
++–+</p>
+</div></section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="OPT.html" class="btn btn-neutral float-right" title="OPT, OPT-X" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="OMIN.html" class="btn btn-neutral float-left" title="OMIN=n.nn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, The Molecular Sciences Software Institute, James Stewart.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

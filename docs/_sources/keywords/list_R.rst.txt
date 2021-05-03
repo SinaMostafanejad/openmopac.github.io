@@ -1,0 +1,22 @@
+R
+-
+
+.. toctree::
+
+  RABBIT
+  RAMA
+  RAPID
+  RE-LOCAL
+  RECALC
+  RELSCF
+  REORTHOG
+  RESEQ
+  RESIDUES
+  RESTART
+  RHF
+  RM1
+  RMAX
+  RMIN
+  ROOT
+  RSCAL
+  RSOLV

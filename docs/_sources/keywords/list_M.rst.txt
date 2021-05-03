@@ -1,0 +1,24 @@
+M
+-
+
+.. toctree::
+
+  MAXCI
+  MECI
+  MERS
+  METAL
+  MICROS
+  MINI
+  MINMEP
+  MMOK
+  MNDO
+  MNDOD
+  MODE
+  MOLDAT
+  MOLSYM
+  MOL_QMMM
+  MOPAC
+  MOZYME
+  MRCI
+  MS
+  MULLIK

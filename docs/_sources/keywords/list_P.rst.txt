@@ -1,0 +1,39 @@
+P
+-
+
+.. toctree::
+
+  P
+  PDB
+  PDB
+  PDBOUT
+  PECI
+  PI
+  PKA
+  PL
+  PM3
+  PM6
+  PM6-D3
+  PM6-D3H4
+  PM6-D3H4X
+  PM6-DHplus
+  PM6-DH2
+  PM6-DH2X
+  PM7
+  PM7-TS
+  PMEP
+  PMEPR
+  POINT
+  POINT1
+  POINT2
+  POLAR
+  POTWRT
+  POWSQ
+  PRECISE
+  PRESSURE
+  PRNT
+  PRTCHAR
+  PRTINT
+  PRTMEP
+  PRTXYZ
+  PULAY
