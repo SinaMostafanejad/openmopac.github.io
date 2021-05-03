@@ -1,5 +1,5 @@
-API Access
-==========
+API Documentation
+=================
 
 For now, this page will explain how to use MOPAC's existing disk-based API.
 

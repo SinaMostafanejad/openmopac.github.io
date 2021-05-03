@@ -2,5 +2,5 @@ Y
 -
 
 .. toctree::
-   :hidden:
+
 

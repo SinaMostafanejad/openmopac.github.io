@@ -6,11 +6,13 @@
 Welcome to the MOPAC website
 ============================
 
+.. warning::
+  This website is presently under development.
+  The active website for MOPAC is still http://openmopac.net until the official open-source release of MOPAC in mid-2021.
+
 MOPAC :cite:p:`Stewart:1990`, the **M**\ olecular **O**\ rbital **PAC**\ kage, is software for performing
 quantum chemistry calculations based on semiempirical thermochemistry models (e.g. AM1, PM3, PM6, PM7).
 MOPAC has been under active development since 1981, led by James J. P. Stewart.
-This website is presently under development.
-See http://openmopac.net for the closed-source MOPAC website from which much of the content of this website will be derived.
 
 Ask users to cite MOPAC if they use it to produce results in a scientific publication.
 
@@ -22,13 +24,13 @@ Ask users to cite MOPAC if they use it to produce results in a scientific public
   downloads
   examples
   keywords
-  api
   questions
   forum
   data
   methodology
   history
   bibliography
+  api
   impact
 
 Indices and tables

@@ -2,7 +2,7 @@
 -
 
 .. toctree::
-  :hidden:
+
 
   0SCF
   1SCF

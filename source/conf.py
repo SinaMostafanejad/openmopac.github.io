@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MOPAC'
-copyright = '2021, James Stewart, The Molecular Sciences Software Institute'
+copyright = '2021, The Molecular Sciences Software Institute, James Stewart'
 author = 'Jonathan Moussa, James Stewart'
 
 

@@ -2,6 +2,6 @@ B
 -
 
 .. toctree::
-  :hidden:
+
 
   BAR

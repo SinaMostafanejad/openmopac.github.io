@@ -1,0 +1,5 @@
+========================       ========================================
+:ref:`0SCF`                    parse the input file, then quit
+:ref:`1SCF`                    do not relax the atoms
+:ref:`BAR`                     reduce bar length by a maximum of x%
+========================       ========================================

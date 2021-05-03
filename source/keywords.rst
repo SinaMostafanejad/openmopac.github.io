@@ -6,10 +6,14 @@ Clarify the flexibility or lack thereof: keywords aren't case sensitive, note st
 
 An alphabetical list of MOPAC's keywords preceded by a tabular glossary.
 
+.. rubric:: Glossary
+
+.. include:: glossary.txt
+
 .. toctree::
   :hidden:
 
-  keywords/#
+  keywords/num
   keywords/A
   keywords/B
   keywords/C
@@ -36,11 +40,3 @@ An alphabetical list of MOPAC's keywords preceded by a tabular glossary.
   keywords/X
   keywords/Y
   keywords/Z
-
-.. rubric:: Glossary
-
-========================       ========================================
-:ref:`0SCF`                    parse the input file, then quit
-:ref:`1SCF`                    do not relax the atoms
-:ref:`BAR`                     reduce bar length by a maximum of x%
-========================       ========================================
