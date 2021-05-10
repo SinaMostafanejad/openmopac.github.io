@@ -63,11 +63,7 @@
 :ref:`DERNVO`        Print part of working in DERNVO 
 :ref:`DFORCE`        Force calculation specified, also print force matrix. 
 :ref:`DFP`           Use Davidson-Fletcher-Powell method to optimize geometries <!--
-:ref:`DIPOLE`        Fit the ESP to the calculated dipole 
 :ref:`DIPOLE`        In animations graphs, replace &Delta;Hf with dipole
-:ref:`DIPX`          X component of dipole to be fitted 
-:ref:`DIPY`          Y component of dipole to be fitted 
-:ref:`DIPZ`          Z component of dipole to be fitted -->
 :ref:`DISEX`         Distance for interactions in fine grid in COSMO 
 :ref:`DISP`          Print the hydrogen bonding and dispersion contributions to the heat of formation
 :ref:`DMAX`          Maximum stepsize in eigenvector following 
