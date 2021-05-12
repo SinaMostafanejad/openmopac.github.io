@@ -1,7 +1,7 @@
 .. _CUTOFF:
 
-``CUTOFF=n.nn``
-===============
+``CUTOFF``
+==========
 
 | ```MOZYME`` <mozyme.html>`__ calculations run faster when some NDDO
   interactions are ignored.  By default, all NDDO interactions are

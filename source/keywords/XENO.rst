@@ -1,11 +1,7 @@
 .. _XENO:
 
- 
-
-XENO
-
 ``XENO``
---------
+========
 
 This keyword is only used when the default atomic labels in a PDB file
 are not to be used, i.e., when ```RESIDUES`` <residues.html>`__ or

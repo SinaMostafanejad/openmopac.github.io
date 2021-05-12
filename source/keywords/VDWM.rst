@@ -1,7 +1,7 @@
 .. _VDWM:
 
-``VDWM(text)``
-==============
+``VDWM``
+========
 
 In ```MOZYME`` <mozyme.html>`__,  the
 ```LEWIS`` <Lewis_structures.html>`__ structure is constructed from the

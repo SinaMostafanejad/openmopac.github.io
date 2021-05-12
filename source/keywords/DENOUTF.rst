@@ -1,7 +1,7 @@
-.. _DENOUT:
+.. _DENOUTF:
 
-``DENOUT``
-==========
+``DENOUTF``
+===========
 
 In a MOPAC calculation, the density matrix at the end of the calculation
 is to be output in a form suitable for input in another job. If an

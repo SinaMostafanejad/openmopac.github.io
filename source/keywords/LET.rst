@@ -1,7 +1,7 @@
 .. _LET:
 
-``LET, LET(nnn)``
-=================
+``LET``
+=======
 
 As MOPAC evolves, the meaning of ``LET`` is changing.
 

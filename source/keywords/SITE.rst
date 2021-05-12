@@ -1,7 +1,7 @@
 .. _SITE:
 
-`` SITE=(text)``
-----------------
+``SITE``
+========
 
 Quite often, after hydrogen atoms have been added to a protein, the
 formal, i.e., Lewis structure, ionization state of various sites are not

@@ -1,9 +1,7 @@
 .. _ALLBONDS:
 
-````
-
-ALLBONDS
---------
+``ALLBONDS``
+============
 
 When keyword ``BONDS`` is used in a ``MOZYME`` calculation, only those
 bonds with bond orders greater than 0.01 and that do not involve

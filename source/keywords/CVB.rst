@@ -1,7 +1,7 @@
 .. _CVB:
 
-``CVB(text)``
--------------
+``CVB``
+=======
 
 | Sometimes in a ```MOZYME`` <mozyme.html>`__ calculation, a Lewis
   structure cannot be constructed from the topology of the system

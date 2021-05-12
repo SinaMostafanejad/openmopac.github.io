@@ -1,7 +1,7 @@
 .. _SHIFT:
 
-``SHIFT=n.nn``
-==============
+``SHIFT``
+=========
 
 In an attempt to obtain an SCF by damping oscillations which slow down
 the convergence or prevent an SCF being achieved, the virtual M.O.

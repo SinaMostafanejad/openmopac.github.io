@@ -1,7 +1,7 @@
 .. _RECALC:
 
-``RECALC=n``
-============
+``RECALC``
+==========
 
 ``RECALC=n`` calculates the Hessian every *n* steps in the EF
 optimization. For small *n* this is costly but is also very effective in

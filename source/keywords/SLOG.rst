@@ -1,7 +1,7 @@
 .. _SLOG:
 
-``SLOG, SLOG=n.nn``  
-=====================
+``SLOG``
+========
 
 The line-search mechanism in the `L-BFGS <lbfgs.html>`__ geometry
 optimization is replaced with a constant step size. This prevents large

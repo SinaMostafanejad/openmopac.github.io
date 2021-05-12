@@ -1,7 +1,7 @@
 .. _IRC:
 
-``IRC=n``
-=========
+``IRC``
+=======
 
 An `Intrinsic Reaction Coordinate <DRC_coordinates.html>`__ calculation
 to be run.  The following options are provided:

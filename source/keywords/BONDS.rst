@@ -1,7 +1,7 @@
 .. _BONDS:
 
-``BONDS ALLBONDS``
-==================
+``BONDS``
+=========
 
 The rotationally invariant bond order [`15 <references.html#bonds>`__]
 between all pairs of atoms is printed. In this context a bond is defined

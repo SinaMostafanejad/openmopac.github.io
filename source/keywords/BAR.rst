@@ -1,7 +1,7 @@
 .. _BAR:
 
-``BAR=n.nn``
-============
+``BAR``
+=======
 
 In the ``SADDLE`` calculation [`18 <references.html#saddle>`__], the
 distance between the two geometries is steadily reduced until the

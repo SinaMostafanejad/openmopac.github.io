@@ -1,7 +1,7 @@
 .. _T:
 
-``T=n[M,H,D,W]``
-================
+``T``
+=====
 
 This is a facility to allow the program to shut down in an orderly
 manner on computers with execution time cpu limits.

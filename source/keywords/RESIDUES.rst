@@ -1,7 +1,9 @@
 .. _RESIDUES:
 
-``RESIDUES[0]``
----------------
+``RESIDUES``
+============
+
+(add a separate keyword for RESIDUES0 ???)
 
 In protein work, each atom will be labeled using information supplied by
 the PDB file.  An alternative is to use keyword ``RESIDUES`` which

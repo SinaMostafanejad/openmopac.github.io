@@ -1,7 +1,9 @@
 .. _CdotIdotDdot:
 
+``C.I.D.``
+==========
+
 ``C.I.D=n, C.I.D.=(n,m)`` 
-==========================
 
 Available for ```INDO`` <indo.html>`__-based CI calculations only. The
 active space for double excitations includes *n* M.O.s. If only *n* is

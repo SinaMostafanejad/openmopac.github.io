@@ -1,7 +1,7 @@
 .. _GEO_REF:
 
-``GEO_REF="text"``
-==================
+``GEO_REF``
+===========
 
 ``GEO_REF`` supplies a second geometry to a job.  If more than one line
 of keywords is supplied, then this keyword should be on the first line.

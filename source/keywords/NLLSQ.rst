@@ -1,9 +1,7 @@
 .. _NLLSQ:
 
-````
-
-NLLSQ
-=====
+``NLLSQ``
+=========
 
 The gradient norm is to be minimized by Bartel's
 method [`8 <references.html#nllsq>`__]. This is a Non-Linear Least

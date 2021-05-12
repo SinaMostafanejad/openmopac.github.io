@@ -1,7 +1,7 @@
 .. _X-PRIORITY:
 
-``X-PRIORITY=n.nn``
-===================
+``X-PRIORITY``
+==============
 
 In a DRC or IRC calculation, results will be printed whenever the
 calculated geometry changes by *n*.\ *nn* Å. 

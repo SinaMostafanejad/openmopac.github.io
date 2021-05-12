@@ -1,7 +1,7 @@
 .. _SCFCRT:
 
-``SCFCRT=n.nn``
-===============
+``SCFCRT``
+==========
 
 ``SCFCRT``\ sets the self-consistent field criterion, i.e., the change
 in energy in kcal/mol on two successive iterations. For most situations

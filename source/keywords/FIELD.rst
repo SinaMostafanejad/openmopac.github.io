@@ -1,7 +1,7 @@
 .. _FIELD:
 
-``FIELD=(n.nn,m.mm,l.ll)``
-==========================
+``FIELD``
+=========
 
 An external electric field of intensity *n*.\ *nn* volts/Ångstrom in the
 *x*-direction, *m*.\ *mm* volts/Ångstrom in the *y*-direction, and

@@ -1,7 +1,9 @@
 .. _CHAINS:
 
+``CHAINS``
+==========
+
 ``CHAINS=(text)``
-=================
 
 ``CHAINS=(A)``\ can be used to select all atoms in a PDB file that have
 the same chain-letter, here ``A``.  Some PDB files contain more than one

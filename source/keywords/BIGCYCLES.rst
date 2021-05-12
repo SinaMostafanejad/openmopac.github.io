@@ -1,7 +1,7 @@
 .. _BIGCYCLES:
 
-``BIGCYCLES=n``
-===============
+``BIGCYCLES``
+=============
 
 When ``BIGCYCLES=n`` is specified, a maximum of *n* complete geometry
 optimizations are allowed. After *n* optimizations, the calculation is

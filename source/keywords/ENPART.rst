@@ -1,6 +1,7 @@
 .. _ENPART:
 
 ``ENPART``
+==========
 
 This is a very useful tool for analyzing the energy terms within a
 system. The total energy, in eV, obtained by the addition of the

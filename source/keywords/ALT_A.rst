@@ -1,5 +1,8 @@
 .. _ALT_A:
 
+``ALT_A``
+=========
+
 Some PDB geometries have two or more possible positions for some atoms
 (positional disorder). These are indicated by the letters 'A', 'B',
 etc., before the three letter abbreviation for the residue. Only one

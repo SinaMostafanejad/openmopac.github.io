@@ -1,7 +1,7 @@
 .. _DATA:
 
-``DATA="<text>"``
-=================
+``DATA``
+========
 
 | Normally, MOPAC reads data from the data-file supplied.  When the name
   of the data set cannot be changed, the data set to be used can be

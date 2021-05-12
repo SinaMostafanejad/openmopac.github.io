@@ -1,9 +1,7 @@
 .. _NOANCI:
 
-````
-
-NOANCI
-======
+``NOANCI``
+==========
 
 RHF open-shell derivatives are normally calculated using Liotard's
 analytical C.I. method [`43 <references.html#analci>`__]. In general, do

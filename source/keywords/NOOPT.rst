@@ -1,7 +1,7 @@
 .. _NOOPT:
 
-``NOOPT, NOOPT-X``
-==================
+``NOOPT``
+=========
 
 Turn off all optimization flags for atoms of type X.  This keyword is
 useful for partial geometry optimizations.  If "-X'" is missing, turn

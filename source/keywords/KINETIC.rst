@@ -1,7 +1,7 @@
 .. _KINETIC:
 
-``KINETIC=n.nnn``
-=================
+``KINETIC``
+===========
 
 In a DRC calculation *n*.\ *nnn* kcal/mol of excess kinetic energy is
 added to the system.  At the start of a DRC calculation, the atoms are

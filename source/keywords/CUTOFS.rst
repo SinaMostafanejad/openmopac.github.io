@@ -1,7 +1,7 @@
 .. _CUTOFS:
 
-``CUTOFS=n.nn``
-===============
+``CUTOFS``
+==========
 
 ```MOZYME`` <mozyme.html>`__ calculations run somewhat faster when some
 overlap integrals are ignored.  By default, all overlap integrals

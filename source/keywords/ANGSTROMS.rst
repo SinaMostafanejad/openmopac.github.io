@@ -1,7 +1,7 @@
 .. _ANGSTROMS:
 
-``A0`` or\ ``ANGSTROMS``
-========================
+``ANGSTROMS``
+=============
 
 For most geometries, the choice of units is unambiguous.  Standard
 `MOPAC <geometry_specification.html>`__ and `Gaussian 

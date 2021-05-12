@@ -1,7 +1,7 @@
 .. _MINI:
 
-``MINI``\ :sup:`‡`
-==================
+``MINI``
+========
 
 When very large molecules such as enzymes are modeled, the output can
 become very large.  To reduce this, use ``MINI``.  When ``MINI`` is

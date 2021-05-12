@@ -1,7 +1,7 @@
-.. _FORCE:
+.. _FORCETS:
 
-``FORCE``
-=========
+``FORCETS``
+===========
 
 A force-calculation is to be run. The Hessian, that is the matrix in
 millidynes per Ångstrom) of second derivatives of the energy with

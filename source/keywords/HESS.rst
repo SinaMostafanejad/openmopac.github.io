@@ -1,7 +1,7 @@
 .. _HESS:
 
-``HESS=n``
-==========
+``HESS``
+========
 
 In Baker's Eigenvector Following routine, options exist for deciding how
 to construct the initial Hessian matrix. The default is ``HESS=0``.

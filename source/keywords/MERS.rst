@@ -1,7 +1,9 @@
 .. _MERS:
 
+``MERS``
+========
+
 ``MERS=(n1) ``  or ``  MERS=(n1,n2)``    or   `` MERS=(n1,n2,n3)``
-------------------------------------------------------------------
 
 When keyword ``MERS``\ is present, information on a one-dimensional
 polymer, a two-dimensional layer structure or a full three-dimensional

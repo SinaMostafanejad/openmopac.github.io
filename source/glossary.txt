@@ -24,7 +24,7 @@
 :ref:`BIGCYCLES`     Do a maximum of n big steps 
 :ref:`BIRADICAL`     System has two unpaired electrons 
 :ref:`BONDS`         Print final bond-order matrix 
-:ref:`BRZ`           Output data for Program BZ - analysis of the Brillouin Zones
+:ref:`BZ`            Output data for Program BZ - analysis of the Brillouin Zones
 :ref:`CdotAdotSdot`  Defines the size of a complete active space calculation in an INDO/S calculation
 :ref:`CdotIdot`      A multi-electron configuration interaction specified 
 :ref:`CdotIdotDdot`  Defines the active space for double excitations in an INDO/S calculation
@@ -55,6 +55,7 @@
 :ref:`DEBUG`         Debug option turned on 
 :ref:`DEBUGPULAY`    Print working in PULAY
 :ref:`DENOUT`        Density matrix output 
+:ref:`DENOUTF`       Formatted density matrix output 
 :ref:`DENSITY`       Print final density matrix 
 :ref:`DERI1`         Print part of working in DERI1 
 :ref:`DERI2`         Print part of working in DERI2 
@@ -87,6 +88,7 @@
 :ref:`FMAT`          Print details of working in FMAT 
 :ref:`FOCK`          Print last Fock matrix 
 :ref:`FORCE`         Calculate vibrational frequencies 
+:ref:`FORCETS`       Calculate vibrational frequencies for a transition state
 :ref:`FREQCY`        Print symmetrized Hessian in a FORCE calculation
 :ref:`GEO-OK`        Override some safety checks 
 :ref:`GEO_DAT`       Read in geometry from the file &lt;text&gt;
@@ -143,7 +145,6 @@
 :ref:`NLLSQ`         Minimize gradients using NLLSQ 
 :ref:`NOANCI`        Do not use analytical C.I. derivatives 
 :ref:`NOCOMMENTS`    Ignore all lines except ATOM, HETATM, and TER in PDB files
-:ref:`NOGPU`         Do not use GPU acceleration
 :ref:`NOLOG`         Suppress log file trail, where possible 
 :ref:`NOMM`          Do not use molecular mechanics correction to CONH bonds 
 :ref:`NONET`         NONET state required 
@@ -259,7 +260,6 @@
 :ref:`T-PRIORITY`    Time takes priority in DRC 
 :ref:`TDIP`          Output the transition-dipole moments between excited states in an INDO/S calculation
 :ref:`THERMO`        Perform a thermodynamics calculation 
-:ref:`THREADS`       Set the number of threads to be used in parallelization to n
 :ref:`TIMES`         Print times of various stages 
 :ref:`TRANS`         The system is a transition state (used in thermodynamics calculation) 
 :ref:`TRIPLET`       Triplet state required 

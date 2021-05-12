@@ -1,7 +1,7 @@
 .. _DMAX:
 
-``DMAX=n.nn``
-=============
+``DMAX``
+========
 
 In the EF routine [`7 <references.html#ef-ts>`__], the starting value
 for the trust radius is set to *n*.\ *nn*. After the first geometry
