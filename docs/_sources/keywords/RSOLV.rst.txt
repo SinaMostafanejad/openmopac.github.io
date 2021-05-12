@@ -1,7 +1,7 @@
 .. _RSOLV:
 
-``RSOLV=n.nn``
-==============
+``RSOLV``
+=========
 
 Used by the  `COSMO <cosmo.html>`__  method to set the effective radius
 of the solvent molecule to *n*.\ *nn*. The default value (1.3) is

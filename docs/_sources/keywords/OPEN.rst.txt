@@ -1,7 +1,7 @@
 .. _OPEN:
 
-``OPEN(n1,n2)``
-===============
+``OPEN``
+========
 
 **RHF description:** The M.O. occupancy during the SCF calculation can
 be defined in terms of doubly occupied, empty, and fractionally occupied

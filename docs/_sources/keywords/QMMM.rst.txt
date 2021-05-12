@@ -1,9 +1,9 @@
 .. _QMMM:
 
- 
+``QMMM``
+========
 
-``QMMM`` (Alt.: ``MOL_QMMM``)
-=============================
+(NOTE: removing synonym MOL_QMMM from documentation, still supported in code)
 
 ``QMMM`` incorporates environmental effects in terms of the QM/MM
 approach.  This keyword, its description, and implementation into MOPAC

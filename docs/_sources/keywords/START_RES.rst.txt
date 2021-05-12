@@ -1,7 +1,7 @@
 .. _START_RES:
 
-``START_RES(text)``
-===================
+``START_RES``
+=============
 
  Keyword ``START_RES`` provides information on the residue starting
 numbers and on the locations of the ends of chains.

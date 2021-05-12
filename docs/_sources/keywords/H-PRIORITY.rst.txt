@@ -1,7 +1,7 @@
 .. _H-PRIORITY:
 
-``H-PRIORITY=n.nn``
-===================
+``H-PRIORITY``
+==============
 
 In a ``DRC`` calculation, results will be printed whenever the
 calculated heat of formation changes by *n*.\ *nn* kcal/mol.

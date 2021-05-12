@@ -1,7 +1,7 @@
 .. _BANANA:
 
-``RABBIT and BANANA``
----------------------
+``BANANA``
+==========
 
 In a ```LOCALIZE`` <localize.html>`__ calculation, localized M.O.'s
 (LMO's) in double and triple bonds and on atoms with two or three lone

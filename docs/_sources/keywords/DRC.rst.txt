@@ -1,7 +1,7 @@
 .. _DRC:
 
-``DRC=n.nnn``
-=============
+``DRC``
+=======
 
 In a DRC calculation, the 'half-life' for loss of kinetic energy is
 defined as *n*.\ *nnn* femtoseconds. This is equivalent to the system

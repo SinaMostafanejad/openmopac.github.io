@@ -1,7 +1,7 @@
 .. _MODE:
 
-``MODE=n``
-==========
+``MODE``
+========
 
 ``MODE`` is used in the EF routine. Normally the default ``MODE=1`` is
 used to locate a transition state, but if this is incorrect, explicitly

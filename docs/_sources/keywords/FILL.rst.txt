@@ -1,7 +1,7 @@
 .. _FILL:
 
-``FILL=n``
-==========
+``FILL``
+========
 
 The *n*'th M.O. in an RHF calculation is constrained to be filled. It
 has no effect on a UHF calculation. After the first iteration (NOTE:  

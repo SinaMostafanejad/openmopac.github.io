@@ -1,7 +1,7 @@
 .. _EPS:
 
-``EPS=n.nn``
-============
+``EPS``
+=======
 
 Sets the dielectric constant for the solvent to *n*.\ *nn*. Presence of
 this keyword will cause the `COSMO <cosmo.html>`__ (Conductor-like

@@ -1,7 +1,7 @@
 .. _T-PRIORITY:
 
-``T-PRIORITY=n.nn``
-===================
+``T-PRIORITY``
+==============
 
 In a ```DRC`` <drc0.html>`__ calculation, results will be printed
 whenever the calculated time changes by *n*.\ *nn* femtoseconds. This

@@ -1,7 +1,9 @@
 .. _AUX:
 
+``AUX``
+=======
+
 ``AUX[([n][,][COMP][,][PRECISION=m][,][MOS=n][,][XP][,][XS][,][XW])]``
-======================================================================
 
 | When ``AUX`` is used then auxiliary information is output to a file
   called <file>.aux.  When ``AUX``\ (*n*) is used, output for the

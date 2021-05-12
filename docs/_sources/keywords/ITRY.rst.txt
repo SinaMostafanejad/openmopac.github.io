@@ -1,7 +1,7 @@
 .. _ITRY:
 
-``ITRY=nn``
-===========
+``ITRY``
+========
 
 The default maximum number of SCF iterations is 2000. When this limit
 presents difficulty, ``ITRY=nn`` can be used to re-define it. For

@@ -1,7 +1,7 @@
 .. _DDMAX:
 
-``DDMAX=n.nn``
-==============
+``DDMAX``
+=========
 
 The maximum value of the trust radius in ``EF`` and ``TS`` is set to
 *n*.\ *nn*. The largest geometry change on any cycle is ``DDMAX``. Use

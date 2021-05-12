@@ -1,9 +1,7 @@
 .. _EXCITED:
 
-````
-
-EXCITED
-=======
+``EXCITED``
+===========
 
 The state to be calculated is the first excited open-shell singlet
 state. If the ground state is a singlet, then the state calculated will

@@ -1,7 +1,7 @@
 .. _DISP:
 
-``DISP, DISP(n.nn)``
-====================
+``DISP``
+========
 
 Although post-SCF hydrogen bonding and dispersion energy contributions
 are calculated, they are not normally printed.  To print these

@@ -1,7 +1,7 @@
 .. _CUTOFP:
 
-``CUTOFP=n.nn``
-===============
+``CUTOFP``
+==========
 
 In polymers and solids, a cutoff distance, in Ångstroms, is needed in
 order to ensure that every atom has a correct electric environment. If

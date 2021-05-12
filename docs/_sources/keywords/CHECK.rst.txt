@@ -1,7 +1,7 @@
 .. _CHECK:
 
 ``CHECK``
----------
+=========
 
 If a job runs to completion, but the calculated Heat of Formation,
 ΔH\ :sub:`f,` is very large (over 10,000 kcal/mol) is likely that there

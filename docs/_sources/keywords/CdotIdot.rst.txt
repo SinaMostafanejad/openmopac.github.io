@@ -1,7 +1,9 @@
 .. _CdotIdot:
 
+``C.I.``
+========
+
 ``C.I.=(n,m)``
-==============
 
 In addition to specifying the number of M.O.s in the active space, the
 number of electrons can also be defined. In ``C.I.=(n,m)``, *n* is the

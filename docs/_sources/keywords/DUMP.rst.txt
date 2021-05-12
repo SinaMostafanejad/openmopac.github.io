@@ -1,7 +1,7 @@
 .. _DUMP:
 
-``DUMP=nn.nn``
-==============
+``DUMP``
+========
 
 Restart files are written automatically at two hour CPU time intervals
 to allow a long job to be restarted if the job is terminated

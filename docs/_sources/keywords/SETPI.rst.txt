@@ -1,7 +1,7 @@
 .. _SETPI:
 
-``SETPI`` or ``SETPI=<file>.TXT``
-=================================
+``SETPI``
+=========
 
 In some instances, the default `Lewis
 structure <Lewis_structures.html>`__ used in a

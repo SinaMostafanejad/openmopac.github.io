@@ -1,9 +1,7 @@
 .. _GEO-OK:
 
-````
-
-GEO-OK
-======
+``GEO-OK``
+==========
 
 Normally the program will stop if certain errors occur.  If ``GEO-OK``
 is present, the job will continue, but there is an increased probability

@@ -1,7 +1,7 @@
 .. _GNORM:
 
-``GNORM=n.nn``
-==============
+``GNORM``
+=========
 
 The geometry optimization termination criteria (see
 `Criteria <Geometry_criteria.html>`__) in both gradient minimization and

@@ -1,7 +1,7 @@
 .. _VDW:
 
-``VDW(text)``
-=============
+``VDW``
+=======
 
 In a COSMO calculation (keyword ```ESP=78.4`` <esp.html>`__), the Van
 der Waals radii of atoms can be set or changed by use of ``VDW``. The

@@ -1,7 +1,7 @@
 .. _ROOT:
 
-``ROOT=n``
-==========
+``ROOT``
+========
 
 In a configuration interaction calculation, a specific state can be
 requested by specifying the state name and the quantum number of that

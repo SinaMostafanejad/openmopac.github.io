@@ -1,7 +1,7 @@
 .. _WRTCONF:
 
-``WRTCONF=n.nn`` 
-=================
+``WRTCONF`` 
+===========
 
 Available for ```INDO`` <indo.html>`__-based CI calculations only. For
 each excited state, print the CI coefficients of all electron

@@ -1,10 +1,21 @@
 Keywords
 ========
 
-Precisely describe the syntax of keywords and the notation used on this webpage. Use [] for optional arguments, standard names based on types.
-Clarify the flexibility or lack thereof: keywords aren't case sensitive, note string delimiters, note allowed syntax for real numbers.
+By default, MOPAC input files contain one line of keywords followed by two lines of comments.
+MOPAC's keywords are strings that can include letters, numbers, and special characters excluding ``=``, ``(``, ``)``, and whitespace.
+While the MOPAC documentation and source code refer to all keyword letters as being uppercase,
+the specification of keywords in the input file is not case sensitive.
 
-An alphabetical list of MOPAC's keywords preceded by a tabular glossary.
+Keywords either appear by themselves or with the specification of additional values that can be integers, real numbers, or strings.
+In some cases, one or more of these additional values is optional.
+The standard syntax is ``KEYWORD=value`` for one value and ``KEYWORD=(value1,value2,...,valueN)`` for multiple values,
+with no extra whitespace.
+MOPAC can parse real numbers in scientific notation with ``d``, ``D``, ``e``, or ``E`` separating the mantissa and exponent.
+Values that are strings should be delineated by ``"`` if they contain whitespace, ``,``, ``(``, or ``)``.
+In older versions of MOPAC, some keywords deviate from this syntax and the present version maintains backward compatibility with older syntax,
+which otherwise is not specified here.
+
+Each keyword has its own webpage that describes its usage and specifies the number, type, and purpose of its additional values.
 
 .. rubric:: Glossary
 

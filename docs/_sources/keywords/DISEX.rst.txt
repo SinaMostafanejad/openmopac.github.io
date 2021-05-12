@@ -1,7 +1,7 @@
 .. _DISEX:
 
-``DISEX=n.nn``
-==============
+``DISEX``
+=========
 
 Used for the COSMO method (see ``EPS``). In units of mean segment
 diameter, *n*.\ *nn* is the distance up to which the interactions of two

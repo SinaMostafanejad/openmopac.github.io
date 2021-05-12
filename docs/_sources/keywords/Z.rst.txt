@@ -1,7 +1,7 @@
 .. _Z:
 
-``Z=n``
-=======
+``Z``
+=====
 
 By default, the number of mers, Z, in a unit cell is worked out from the
 empirical formula.  Thus, if a unit cell has the empirical formula

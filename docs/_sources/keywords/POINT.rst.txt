@@ -1,7 +1,9 @@
 .. _POINT:
 
-``POINT(S)=n``
-==============
+``POINT``
+=========
+
+(remove POINTS synonym from documentation?)
 
 The number of points to be calculated on a reaction path is specified by
 ``POINT=n``. Used only with ``STEP`` in a path calculation. ``POINT`` or

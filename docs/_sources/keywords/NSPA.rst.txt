@@ -1,7 +1,7 @@
 .. _NSPA:
 
-``NSPA=n``
-==========
+``NSPA``
+========
 
 Used for the COSMO method (see ``EPS``) to set the number of geometrical
 segments per atom to *n*. This keyword should seldom be used, as the

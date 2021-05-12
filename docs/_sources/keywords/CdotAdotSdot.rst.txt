@@ -1,7 +1,9 @@
 .. _CdotAdotSdot:
 
+``C.A.S.``
+==========
+
 ``C.A.S=n, C.A.S.=(n,m)`` 
-==========================
 
 Available for ```INDO`` <indo.html>`__-based CI calculations only. A
 complete active space calculation will be performed within an active

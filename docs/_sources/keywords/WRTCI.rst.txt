@@ -1,7 +1,7 @@
 .. _WRTCI:
 
-``WRTCI=n``
-===========
+``WRTCI``
+=========
 
 Available for ```INDO`` <indo.html>`__-based CI calculations only. Print
 up to the *n* lowest energy excited states in the output file. The

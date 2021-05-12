@@ -1,9 +1,7 @@
 .. _LBFGS:
 
-````
-
-LBFGS
------
+``LBFGS``
+=========
 
 Optimize the geometry using the L-BFGS function minimizer. This is based
 on the BFGS optimizer, but it does not store the inverse Hessian,

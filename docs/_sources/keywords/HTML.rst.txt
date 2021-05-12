@@ -1,7 +1,7 @@
 .. _HTML:
 
-``HTML`` ``HTML(NORES)``
-========================
+``HTML``
+========
 
  When ``HTML`` is present a simple web-page will be written.  This
 web-page is intended for use with the Graphical-User Interface

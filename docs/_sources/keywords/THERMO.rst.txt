@@ -1,7 +1,9 @@
 .. _THERMO:
 
-``THERMO(nnn,mmm,lll)`` or ``THERMO=(nnn,mmm,lll)``
-===================================================
+``THERMO``
+==========
+
+(Need to grab web contents for other numbers of arguments)
 
 Similar to ``THERMO(nnn,mmm)``, except now three numbers are supplied,
 the starting temperature, *nnn*, the step-size, *mmm*, and the ending

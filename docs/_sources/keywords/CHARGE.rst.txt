@@ -1,7 +1,7 @@
 .. _CHARGE:
 
-``CHARGE=n``
-============
+``CHARGE``
+==========
 
 When the system being studied is an ion, the charge, *n*, on the ion
 must be supplied by ``CHARGE=n``. For cations *n* can be 1, 2, 3, etc.;

@@ -1,7 +1,7 @@
 .. _MS:
 
-``MS=n[.0,.5]``
-===============
+``MS``
+======
 
 ``MS=n`` can be used in defining the spin-state of a system.  Small
 values of spin can also be defined using explicit keywords, such as

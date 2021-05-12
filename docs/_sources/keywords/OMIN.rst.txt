@@ -1,7 +1,7 @@
 .. _OMIN:
 
-``OMIN=n.nn``
-=============
+``OMIN``
+========
 
 In a ``TS`` calculation, the minimum allowable overlap of the transition
 state eigenvectors is set by *n*.\ *nn*. If ``OMIN`` is *not* set, the

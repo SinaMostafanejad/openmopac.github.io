@@ -1,7 +1,7 @@
 .. _CYCLES:
 
-``CYCLES=n``
-============
+``CYCLES``
+==========
 
 When ``CYCLES=n`` is specified, a maximum of *n* distinct geometry
 cycles are allowed. After *n* cycles, the calculation is stopped in the

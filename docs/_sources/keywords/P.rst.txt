@@ -2,8 +2,8 @@
 
  
 
-``P=n.nn`` 
------------
+``P`` 
+=====
 
 The effect of an applied pressure on a solid can be simulated by
 ``P=n.nn``, where ``n.nn`` is the pressure in Newtons per square meter,

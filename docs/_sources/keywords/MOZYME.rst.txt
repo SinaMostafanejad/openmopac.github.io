@@ -1,9 +1,7 @@
 .. _MOZYME:
 
-````
-
-MOZYME
-------
+``MOZYME``
+==========
 
 The keyword ``MOZYME`` replaces the standard SCF procedure with a
 localized molecular orbital (LMO) method.  MOZYME was developed to allow

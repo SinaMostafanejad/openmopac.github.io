@@ -1,7 +1,7 @@
 .. _TRANS:
 
-``TRANS=n``
-===========
+``TRANS``
+=========
 
 The facility exists to allow the ``THERMO`` calculation to handle
 systems with internal rotations. ``TRANS=n`` will remove the *n* lowest

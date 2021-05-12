@@ -1,7 +1,7 @@
 .. _MAXCI:
 
-``MAXCI=n``
-===========
+``MAXCI``
+=========
 
 Available for INDO-based CI calculations only. Include a maximum of *n*
 electron configurations in the CI matrix. The default value is 2000; it

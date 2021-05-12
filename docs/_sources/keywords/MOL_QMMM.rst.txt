@@ -2,8 +2,10 @@
 
  
 
-``QMMM`` (Alt.: ``MOL_QMMM``)
-=============================
+``MOL_QMMM``
+============
+
+(Should this synonym be removed???)
 
 ``QMMM`` incorporates environmental effects in terms of the QM/MM
 approach.  This keyword, its description, and implementation into MOPAC
