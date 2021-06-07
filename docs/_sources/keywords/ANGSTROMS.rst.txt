@@ -1,19 +1,11 @@
 .. _ANGSTROMS:
 
-``ANGSTROMS``
-=============
+ANGSTROMS
+=========
 
-For most geometries, the choice of units is unambiguous.  Standard
-`MOPAC <geometry_specification.html>`__ and `Gaussian 
-input <gaussian_z.html>`__ is in Ångstroms, 
-`TURBOMOLE <TURBOMOLE_geometry.html>`__ input is in atomic units. In
-these cases, do not use ``A0`` or ``ANGSTROMS``.
+Regard the input geometry as being specified in Angstroms,
+which overrides the default behavior.
 
-If  ``A0`` is present, the input geometry will be regarded as being in
-atomic units.
-
-If ``ANGSTROMS``\ is present, the input geometry will be regarded as
-being in Ångstroms.
-
-If neither ``A0`` nor ``ANGSTROMS`` are present, then the default will
-be used.
+By default, geometries in MOPAC's standard format and
+Gaussian's Z-matrix format are assumed to be in Angstroms,
+and geometries in TURBOMOLE's format are assumed to be in Bohr.

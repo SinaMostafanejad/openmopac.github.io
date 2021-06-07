@@ -1,27 +1,38 @@
 .. _ampersand:
 
-``&``
-=====
+\&
+==
 
-An '``&'`` means 'turn the next line into keywords'. An '``&'`` on line
-1 would mean that a second line of keywords should be read in. If that
-second line contained an '``&``', then a third line of keywords would be
-read in. If the first line has an '``&``' then the first description
-line is omitted; if the second line also has an '``&``', then both
-description lines are omitted.
-
-Examples: Use of one '``&``'
+A line of keywords containing ``&`` indicates that the next line is also a line of keywords rather than a line of comments.
+The position of ``&`` within the line of keywords doesn't matter.
+Starting from the standard input file structure of
 
 ::
 
-   VECTORS DENSITY RESTART & NLLSQ T=1H SCFCRT=1.D-8 DUMP=30M
-   PM3 FOCK OPEN(2,2) ROOT=3 SINGLET SHIFT=30
-   Test on a totally weird system
+  KEYWORD1 KEYWORD2 KEYWORD3
+  COMMENT1
+  COMMENT2
+  GEOMETRY
 
-Use of two '``&``'s
+one line of comments can be replaced through one use of ``&`` as
 
 ::
 
-   LARGE=-10 & DRC=4.0 T=1H SCFCRT=1.D-8 DUMP=30M ITRY=300 SHIFT=30
-   PM3 OPEN(2,2) ROOT=3 SINGLET NOANCI T-PRIORITY=0.5 &
-   LET GEO-OK VELOCITY KINETIC=5.0
+  KEYWORD1 &
+  KEYWORD2 KEYWORD3
+  COMMENT1
+  GEOMETRY
+
+and both lines of comments can be replaced through two uses of ``&`` as
+
+::
+
+  KEYWORD1 &
+  KEYWORD2 &
+  KEYWORD3
+  GEOMETRY
+
+This keyword is intended to improve the readability of long keyword lines.
+
+.. warning::
+  A single keyword list can only contain one type of line extender: ``&`` or ``+``.

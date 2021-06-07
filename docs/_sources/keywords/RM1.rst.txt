@@ -1,12 +1,8 @@
 .. _RM1:
 
-``RM1``
-=======
+RM1
+===
 
-The `RM1 <http://www.rm1.sparkle.pro.br/>`__ method(1) is to be used.
+Use the RM1 semiempirical model :cite:p:`Rocha:2006` instead of the default model, PM7 :cite:p:`Stewart:2013`.
+See the :ref:`model_summary` for a comparison of the various models available in MOPAC.
 
-(1) Rocha, G.B., R.O. Freire, A.M. Simas, and J.J.P. Stewart., RM1: A
-Reparameterization of AM1 for H, C, N, O, P, S, F, Cl, Br, and I. J.
-Comp. Chem., **27**\ (10): 1101-1111 (2006).
-
- 

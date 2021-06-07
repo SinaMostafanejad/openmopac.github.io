@@ -1,7 +1,28 @@
 .. _BAR:
 
-``BAR``
-=======
+BAR
+===
+
+**no value**
+
+**1 real value**
+
+real value
+
+1 value:
+
+1. The maximum fraction
+
+**SYNTAX** : ``BAR=x``
+
+===== ==== ===============================================================
+``BAR=x``
+--------------------------------------------------------------------------
+name  type description
+===== ==== ===============================================================
+``x`` real maximum fractional geometric change per iteration in ``SADDLE``
+===== ==== ===============================================================
+
 
 In the ``SADDLE`` calculation [`18 <references.html#saddle>`__], the
 distance between the two geometries is steadily reduced until the

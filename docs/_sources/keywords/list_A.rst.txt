@@ -5,7 +5,6 @@ A
 
   A0
   ADD-H
-  AIDER
   AIGIN
   AIGOUT
   ALLBONDS
