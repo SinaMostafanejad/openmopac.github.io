@@ -1,20 +1,17 @@
 ===================  ======================================================================================================================
-:ref:`ampersand`     Turn next line into keywords 
-:ref:`plus`          Add another line of keywords 
-:ref:`plusplus`      Split a line of keywords or SETUP
-:ref:`0SCF`          Read in data, then stop 
-:ref:`1ELECTRON`     Print final one-electron matrix 
-:ref:`1SCF`          Do one scf and then stop 
-:ref:`A0`            Input geometry is in atomic units
-:ref:`ADD-H`         Add hydrogen atoms (intended for use with organic compounds)
-:ref:`AIDER`         Read in ab-initio derivatives 
-:ref:`AIGIN`         Geometry must be in Gaussian format 
-:ref:`AIGOUT`        Print the geometry in Gaussian format in the ARC file
-:ref:`ALLBONDS`      Print final bond-order matrix, including bonds to hydrogen 
-:ref:`ALLVEC`        Print all vectors 
+:ref:`plusplus`      Extend the line of keywords to the next line of the input file
+:ref:`0SCF`          Read input file, then stop before the SCF cycle
+:ref:`1ELECTRON`     Print the matrix of one-electron resonance integrals
+:ref:`1SCF`          Converge one SCF cycle, then stop before geometry relaxation
+:ref:`A0`            Read the input geometry in atomic units (bohr)
+:ref:`ADD-H`         Add hydrogen atoms to close the valence shell of an organic molecule
+:ref:`AIGIN`         Read the input geometry in Gaussian Z-matrix format 
+:ref:`AIGOUT`        Write the output geometry in Gaussian Z-matrix format to the ``.arc`` file
+:ref:`ALLBONDS`      Print the final bond-order matrix, including weak bonds and hydrogen atoms (:key:`MOZYME` only)
+:ref:`ALLVEC`        Print all MO eigenvectors
 :ref:`ALT_A`         In PDB files with alternative atoms, select atoms A 
-:ref:`AM1`           Use the AM1 hamiltonian 
-:ref:`ANGSTROMS`     Input geometry is in Angstroms
+:ref:`AM1`           Use the AM1 model
+:ref:`ANGSTROMS`     Read the input geometry in angstroms
 :ref:`AUTOSYM`       Symmetry to be imposed automatically 
 :ref:`AUX`           Output auxiliary information for use by other programs
 :ref:`BANANA`        Generate localized molecular orbitals with hybrid orbitals for double bonds
@@ -23,7 +20,7 @@
 :ref:`BFGS`          Use the Flepo or BFGS geometry optimizer
 :ref:`BIGCYCLES`     Do a maximum of n big steps 
 :ref:`BIRADICAL`     System has two unpaired electrons 
-:ref:`BONDS`         Print final bond-order matrix 
+:ref:`BONDS`         Print the final bond-order matrix 
 :ref:`BZ`            Output data for Program BZ - analysis of the Brillouin Zones
 :ref:`CdotAdotSdot`  Defines the size of a complete active space calculation in an INDO/S calculation
 :ref:`CdotIdot`      A multi-electron configuration interaction specified 
@@ -130,8 +127,8 @@
 :ref:`MINI`          Reduce the size of the output by only printing specified atoms
 :ref:`MINMEP`        Minimize MEP minima in the plane defined 
 :ref:`MMOK`          Use molecular mechanics correction to CONH bonds 
-:ref:`MNDO`          Use the MNDO hamiltonian 
-:ref:`MNDOD`         Use the MNDO-d hamiltonian 
+:ref:`MNDO`          Use the MNDO model
+:ref:`MNDOD`         Use the MNDO-d model
 :ref:`MODE`          In EF, follow Hessian mode no. n 
 :ref:`MOLDAT`        Print details of working in MOLDAT 
 :ref:`MOLSYM`        Print details of working in MOLSYM 
@@ -178,16 +175,16 @@
 :ref:`PI`            Resolve density matrix into &sigma;, &pi;, and &delta; components 
 :ref:`PKA`           Print the pKa for ionizable hydrogen atoms attached to oxygen atoms
 :ref:`PL`            Monitor convergence of density matrix in ITER 
-:ref:`PM3`           Use the MNDO-PM3 Hamiltonian 
-:ref:`PM6`           Use the PM6 Hamiltonian 
-:ref:`PM6-D3`        Use the PM6 Hamiltonian with Grimme's corrections for dispersion 
-:ref:`PM6-D3H4`      Use PM6 with &#344;ezá&#269; and Hobza's D3H4 correction
-:ref:`PM6-D3H4X`     Use PM6 with Brahmkshatriya, et al.'s D3H4X correction
-:ref:`PM6-DHplus`    Use the PM6 Hamiltonian with corrections for dispersion and hydrogen-bonding
-:ref:`PM6-DH2`       Use the PM6 Hamiltonian with corrections for dispersion and hydrogen-bonding
-:ref:`PM6-DH2X`      Use PM6 with corrections for dispersion and hydrogen and halogen bonding
-:ref:`PM7`           Use the PM7 Hamiltonian 
-:ref:`PM7-TS`        Use the PM7-TS Hamiltonian (only for barrier heights)
+:ref:`PM3`           Use the PM3 model
+:ref:`PM6`           Use the PM6 model 
+:ref:`PM6-D3`        Use PM6 with the D3 model for dispersion 
+:ref:`PM6-D3H4`      Use PM6 with the D3H4 model for dispersion and hydrogen bonding
+:ref:`PM6-D3H4X`     Use PM6 with the D3H4X model for dispersion and hydrogen/halogen bonding
+:ref:`PM6-DHplus`    Use PM6 with the DH+ model for dispersion and hydrogen bonding
+:ref:`PM6-DH2`       Use PM6 with the DH2 model for dispersion and hydrogen bonding
+:ref:`PM6-DH2X`      Use PM6 with the DH2X model for dispersion and hydrogen/halogen bonding
+:ref:`PM7`           Use the PM7 model (default)
+:ref:`PM7-TS`        Use the PM7-TS model for transition states
 :ref:`PMEP`          Complete semiempirical MEP calculation 
 :ref:`PMEPR`         Complete semiempirical MEP in a plane to be defined 
 :ref:`POINT`         Number of points in reaction path 
@@ -219,7 +216,7 @@
 :ref:`RESIDUES`      Label each atom in a polypeptide with the amino acid residue
 :ref:`RESTART`       Calculation restarted 
 :ref:`RHF`           Use Restricted Hartree-Fock methods 
-:ref:`RM1`           Use the RM1 Hamiltonian
+:ref:`RM1`           Use the RM1 model
 :ref:`RMAX`          In TS, maximum allowed ratio for energy change 
 :ref:`RMIN`          In TS, minimum allowed ratio for energy change 
 :ref:`ROOT`          Root n to be optimized in a C.I. calculation 

@@ -1,20 +1,39 @@
 .. _plus:
 
-``+``
-=====
+\+
+==
 
-A '``+``' sign means 'read another line of keywords'. A '``+``' on line
-1 would mean that a second line of keywords should be read in. If that
-second line contains a '``+``', then a third line of keywords will be
-read in. Regardless of whether a second or a third line of keywords is
-read in, the next two lines would be description lines.
-
-Example of '``+``' option
+A line of keywords containing ``+`` indicates that another line of keywords is being added as the next line of the input file.
+The position of ``+`` within the line of keywords doesn't matter.
+Starting from the standard input file structure of
 
 ::
 
-   RESTART T=4D  OPEN(2,2) SHIFT=20 PM3 +
-   SCFCRT=1.D-8 DEBUG + ISOTOPE FMAT ECHO singlet ROOT=3
-   THERMO(300,400,1)
-   Example of data set with three lines of keywords.
-   Note:  This and the previous line are the two lines of description.
+  KEYWORD1 KEYWORD2 KEYWORD3
+  COMMENT1
+  COMMENT2
+  GEOMETRY
+
+one extra line of keywords can be added through one use of ``+`` as
+
+::
+
+  KEYWORD1 +
+  KEYWORD2 KEYWORD3
+  COMMENT1
+  GEOMETRY
+
+and another extra line of keywords can be added through two uses of ``&`` as
+
+::
+
+  KEYWORD1 &
+  KEYWORD2 &
+  KEYWORD3
+  GEOMETRY
+
+Only two extra lines of keywords are allowed to be added in this manner.
+This keyword is intended to improve the readability of long keyword lines.
+
+.. warning::
+  A single keyword list can only contain one type of line extender: ``&`` or ``+``.

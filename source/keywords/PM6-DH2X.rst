@@ -1,13 +1,17 @@
 .. _PM6-DH2X:
 
-``PM6-DH2X``
-============
+PM6-DH2X
+========
 
-In addition to the PM6-DH2 corrections, PM6-DH2X includes corrections to
-the halogen-oxygen and halogen-nitrogen interactions, as described inJ.
-Rezác and P. Hobza,"A halogen-bonding correction to the semiempirical
-PM6 method" Chem. Phys. Lett., 506 286-289 (2011)
+Use the PM6-DH2X semiempirical model instead of the default model, PM7 :cite:p:`Stewart:2013`.
+It combines the PM6 model :cite:p:`Stewart:2007` with the DH2X model :cite:p:`Rezac:2011` for interatomic pairwise corrections
+for dispersion, hydrogen bonding, and halogen bonding.
+See the :ref:`model_summary` for a comparison of the various models available in MOPAC.
 
- 
+The :ref:`DISP` keyword can be used to print individual pairwise corrections from the DH2X model.
 
- 
+.. warning::
+  There are terms missing from the analytical gradients of the DH2X model.
+  While these terms are often negligible, this issue can be avoided by using the :ref:`NOANCI` keyword
+  to produce consistent numerical gradients, albeit at an increased computational cost.
+

@@ -1,18 +1,12 @@
 .. _AIGOUT:
 
-``AIGOUT``
-==========
+AIGOUT
+======
 
-The ARCHIVE file contains a data-set suitable for submission to MOPAC.
-If, in addition to this data-set, the Z-matrix for Gaussian input is
-wanted, then ``AIGOUT`` (*ab initio* geometry output), should be used.
-
-The Z-matrix is in full Gaussian form. Symmetry, where present, will be
-correctly defined. Names of symbolics will be those used if the original
-geometry was in Gaussian format, otherwise 'logical' names will be used.
-Logical names are of form ``<t><a><b>[<c>][<d>]`` where ``<t>`` is  'r'
-for bond length, 'a' for angle, or 'd' for dihedral, ``<a>`` is the atom
-number, ``<b>`` is the atom with which ``<a>`` is related, ``<c>``, if
-present, is the atom number to which ``<a>`` makes an angle, and
-``<d>``, if present, is the atom number to which ``<a>`` makes a
-dihedral.
+Prints the final molecular geometry to the MOPAC archive file (``.arc``) in :ref:`Gaussian_Zmatrix_format`.
+All symmetry-inequivalent bond distances and angles are assigned symbols.
+Any symbols used in the input file are preserved, otherwise a new symbol is automatically assigned.
+The new symbols begin with ``r`` for bond lengths, ``a`` for bond angles, and ``d`` for dihedral angles,
+followed by a list of numbers denoting the atoms involved in the particular geometric quantity.
+Bond lengths are specified by two atoms, bond angles are specified by three atoms,
+and dihedral angles are specified by four atoms.

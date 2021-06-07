@@ -1,7 +1,7 @@
 .. _ADD-H:
 
-``ADD-H``
-=========
+ADD-H
+=====
 
 Adds hydrogen atoms to a data set to satisfy valence requirements.  Most
 sites are neutralized, the exceptions being: (A) Metal atoms normally

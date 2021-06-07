@@ -1,33 +1,16 @@
 .. _1ELECTRON:
 
-``1ELECTRON``
-=============
+1ELECTRON
+=========
 
-| The final one-electron matrix is printed out. This matrix is composed
-  of atomic orbitals; the array element between orbitals *φ\ λ*\ and
-  *φ\ σ* on different atoms is given by:
+Print the matrix of one-electron resonance integrals for the final molecular geometry.
+For the MNDO-form models implemented in MOPAC, this matrix has the form :cite:p:`Dewar:1977`
 
-.. raw:: html
+.. math::
 
-   <div align="CENTER">
+   H_{\lambda\sigma} = \frac{1}{2} (\beta_{\lambda} + \beta_{\sigma}) S_{\lambda\sigma}
 
-|\\begin{displaymath}H_{\lambda\sigma} = 0.5 \\times (\beta_\lambda +
-\\beta_\sigma) \\times S_{\lambda\sigma}\end{displaymath}|
-
-.. raw:: html
-
-   </div>
-
-| 
-
-The matrix elements between orbitals *φ\ λ*\ and *φ\ σ* on the same atom
-are calculated from the electron-nuclear attraction energy, and also
-from the *U\ λλ* value if *λ = σ*.
-
-The one-electron matrix is unaffected by (a) the charge and (b) the
-electron density. It is only a function of the geometry. Abbreviation:
-``1ELEC``.
-
-.. |\\begin{displaymath}H_{\lambda\sigma} = 0.5 \\times (\beta_\lambda + \\beta_\sigma) \\times S_{\lambda\sigma}\end{displaymath}| image:: img91.gif
-   :width: 184px
-   :height: 30px
+where :math:`\lambda` and :math:`\sigma` are the atomic orbital indices,
+:math:`\beta_{\lambda}` are the atomic orbital energies,
+and :math:`\S_{\lambda\sigma}` is the atomic orbital overlap matrix.
+This matrix is only one term of the full MNDO-form Fock matrix.
