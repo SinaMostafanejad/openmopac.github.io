@@ -9,17 +9,18 @@ the specification of keywords in the input file is not case sensitive.
 
 Keywords either appear by themselves or with the specification of additional values that can be integers, real numbers, or strings.
 In some cases, one or more of these additional values is optional.
-The standard syntax is ``KEYWORD=value`` for one value and ``KEYWORD=(value1,value2,...,valueN)`` for multiple values,
-with no extra whitespace.
+The syntax for specifying these values is keyword-specific and not fully standardized.
+For one value, the syntax is either ``KEYWORD=value``, ``KEYWORD(value)``, or ``KEYWORD-value``.
+For multiple values, the syntax is either ``KEYWORD=(value1,value2,...,valueN)`` or ``KEYWORD(value1,value2,...,valueN)``.
+In all cases, whitespace is not allowed in a keyword statement outside string values with delimiters.
 MOPAC can parse real numbers in scientific notation with ``d``, ``D``, ``e``, or ``E`` separating the mantissa and exponent.
-Values that are strings should be surrounded by ``"`` if they contain ``,``, ``(``, ``)``, ``++``, or whitespace.
+String values do not include a delimiter unless explicitly stated in the keyword syntax, either ``"string"`` or ``(string)``.
 
-Older versions of MOPAC do not rigidly conform to the keyword syntax specified here
-and contain keywords that are no longer officially supported.
-While MOPAC continues to support the old syntax and obsolete keywords to maintain backward compatibility,
+Older versions of MOPAC contain keywords that are no longer officially supported.
+While MOPAC continues to support obsolete keywords to maintain backward compatibility,
 they are not recommended or documented on this website.
 
-Each keyword has its own webpage that describes its usage and specifies the number, type, and purpose of its additional values.
+Each keyword has its own webpage that describes its usage and syntax and specifies the number, type, and purpose of its additional values.
 
 .. rubric:: Glossary
 

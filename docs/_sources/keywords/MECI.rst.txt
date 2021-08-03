@@ -1,13 +1,11 @@
 .. _MECI:
 
-``MECI``
-========
+MECI
+====
 
-If ``MECI`` is specified, then details of the `Multi Electron
-Configuration
-Interaction <theory.html#Multi-Electron%20Configuration%20Interaction>`__
-calculation [`39 <references.html#meci>`__] are printed at the end of
-the calculation. The state vectors can be printed by specifying ``MECI``
-and ``LARGE``. The MECI calculation is either invoked automatically, or
-explicitly invoked by the use of keywords such as  ``C.I.=n`` and
-``OPEN(n,n).``
+Prints the details of a Multi-Electron Configuration Interaction calculation :cite:p:`Armstrong:1972`.
+To print MECI state vectors, the :ref:`LARGE` keyword should also be specified.
+
+.. note::
+  This keyword does not initiate an MECI calculation itself.
+  It only works in conjunction with other keywords such as :ref:`C.I.` and :ref:`OPEN` that initiate MECI calculations.

@@ -1,18 +1,16 @@
 .. _RHF:
 
-``RHF``
-=======
+RHF
+===
 
-The Restricted Hartree-Fock Hamiltonian is to be used.
+Requests a restricted Hartree-Fock (RHF) Hamiltonian that forces the two electrons of opposite spin in an electron pair to have the same spatial orbital.
 
-This is the default for even-electron systems and for odd-electron
-systems that use keywords such as ```MECI`` <meci.html>`__ that imply an
-RHF calculation.  For odd electron (radical) systems, the
-```UHF`` <uhf.html>`__ method is used by default, because geometry
-optimization using UHF runs faster than when ``RHF`` is used. 
+This is the default behavior for even-electron systems and for MOPAC features that do not support unrestricted orbitals (e.g. :ref:`MECI` calculations).
+For supported features, unrestricted orbitals (:ref:`UHF`) are the default behavior for odd-electron systems (i.e. radicals, open shells).
 
-If RHF methods are to be used on odd electron systems, add keyword
-``RHF``.
+RHF is slower than UHF for the geometry optimization of radicals but avoids the problem of spin contamination.
 
-RHF methods are needed if configuration interaction is used, see
-```MECI`` <meci.html>`__.
+Open-shell RHF calculations in MOPAC use Dewar's approach of statistically distributing electrons over :math:`\alpha` and :math:`\beta` spins :cite:p:`Dewar:1968`
+rather than the conventional approach of minimizing the Hartree-Fock energy of a Slater determinant with constrained orbitals.
+These two approaches produce similar but not strictly identical orbitals and total energies.
+For the same set of orbitals, these two approaches would produce the same total energy.

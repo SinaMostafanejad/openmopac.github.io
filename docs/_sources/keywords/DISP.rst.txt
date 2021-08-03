@@ -1,14 +1,13 @@
 .. _DISP:
 
-``DISP``
-========
+DISP
+====
 
-Although post-SCF hydrogen bonding and dispersion energy contributions
-are calculated, they are not normally printed.  To print these
-contributions, add keyword ``DISP``.
+Prints individual post-SCF corrections to the heat of formation,
+including hydrogen-bond and dispersion energies.
 
-If a list of hydrogen bonds is wanted, use ``DISP(n.nn)``, where n.nn is
-the value of the cutoff for printing hydrogen bonds.  If ``DISP(1.0)``
-is used, all hydrogen bonds with a strength of 1.0 or more
-kcal.mol\ :sup:`-1` will be printed.  This is the common cutoff for
-hydrogen bonds.
+**SYNTAX:** ``DISP(cutoff)``
+
+Additionally prints a list of individual hydrogen bonds with a binding energy larger
+than the specified ``cutoff`` energy in units of kcal/mol.
+For example, a reasonable cutoff for detecting standard hydrogen bonds is 1 kcal/mol, specified by ``DISP(1.0)``.

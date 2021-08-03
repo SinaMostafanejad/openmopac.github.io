@@ -4,7 +4,7 @@ PM7
 ===
 
 Use the default semiempirical model, PM7 :cite:p:`Stewart:2013`.
-See the :ref:`model_summary` for a comparison of the various models available in MOPAC.
+See the :ref:`model_overview` for a comparison of the various models available in MOPAC.
 
 .. note:
    Because PM7 is the default model, this keyword is presently unnecessary.

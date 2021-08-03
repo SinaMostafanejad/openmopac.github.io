@@ -1,21 +1,22 @@
 .. _CIS:
 
-``CIS``
-=======
+CIS
+===
 
-In configuration interaction calculations, the ground state and
-microstates resulting from single electron excitations are used if
-``CIS`` is specified. (Read ``CIS`` as Configuration Interaction
-Singles.)
+Restricts the active space to single-electron excitations for configuration interaction calculations (i.e. Configuration Interaction Singles).
 
-In a configuration interaction involving an active space in which *n*
-levels are doubly occupied and *m* levels are empty, the number of
-states considered in the C.I. would be (1 + *2.n.m*).  By `Koopmans'
-theorem <references.html#koopmans>`__, the ground microstate does not
-interact with any microstates resulting from one-electron excitation;
-this means that the lowest state resulting from the C.I. consists of the
-doubly occupied microstate only. It is included in the C.I. so that the
-relative energies are relative to the ground state.  Because the C.I.
-cannot affect the lowest root, a CIS ground-state calculation should not
-be used in runs that affect the geometry, e.g. geometry optimization or
-vibrational frequency calculations.
+The CIS active space is not useful for improving the Hartree-Fock approximation of ground-state properties
+such as total energies, forces, vibrational frequencies, and relaxed geometries.
+This phenomenon is explained by Koopmans' Theorem :cite:p:`Koopmans:1934`,
+which shows that the many-electron Hamiltonian does not couple the Hartree-Fock ground state to singly-excited configurations.
+An active space must include configurations with at least two-electron excitations to improve ground-state properties (e.g. :ref:`CISD`).
+
+.. table:: Number of configurations for :math:`n` doubly-occupied orbitals and :math:`m` empty orbitals
+
+  ============================== ===============
+  excitation type                # of configs
+  ============================== ===============
+  none (RHF ground state)        :math:`1`
+  1 :math:`\alpha` electron      :math:`m n`
+  1 :math:`\beta` electron       :math:`m n`
+  ============================== ===============
