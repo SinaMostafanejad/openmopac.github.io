@@ -7,7 +7,7 @@
 :ref:`ADD-H`         Add hydrogen atoms to close the valence shell of an organic molecule
 :ref:`AIGIN`         Read the input geometry in Gaussian Z-matrix format 
 :ref:`AIGOUT`        Write the output geometry in Gaussian Z-matrix format to the ``.arc`` file
-:ref:`ALLBONDS`      Print the final bond-order matrix, including weak bonds and hydrogen atoms (:key:`MOZYME` only)
+:ref:`ALLBONDS`      Print the final bond-order matrix, including weak bonds and H atoms (:ref:`MOZYME` only)
 :ref:`ALLVEC`        Print all MO eigenvectors
 :ref:`ALT_A`         In PDB files with alternative atoms, select atoms A 
 :ref:`AM1`           Use the AM1 model
@@ -19,12 +19,12 @@
 :ref:`BCC`           Only even unit cells used (used by BZ) 
 :ref:`BFGS`          Use the Flepo or BFGS geometry optimizer
 :ref:`BIGCYCLES`     Do a maximum of n big steps 
-:ref:`BIRADICAL`     System has two unpaired electrons 
+:ref:`BIRADICAL`     Target a biradical ground state
 :ref:`BONDS`         Print the final bond-order matrix 
 :ref:`BZ`            Output data for Program BZ - analysis of the Brillouin Zones
-:ref:`CdotAdotSdot`  Defines the size of a complete active space calculation in an INDO/S calculation
-:ref:`CdotIdot`      A multi-electron configuration interaction specified 
-:ref:`CdotIdotDdot`  Defines the active space for double excitations in an INDO/S calculation
+:ref:`CdotAdotSdot`  Define a complete active space for :ref:`MRCI` (:ref:`INDO` only)
+:ref:`CdotIdot`      Define an active space for CI calculations (:ref:`INDO` compatible)
+:ref:`CdotIdotDdot`  Define an active space for double excitations (:ref:`INDO` only)
 :ref:`CAMP`          Use Camp-King converger in SCF 
 :ref:`CARTAB`        Print point-group character table
 :ref:`CHAINS`        In a protein, explicitely define the letters of chains.
@@ -32,9 +32,9 @@
 :ref:`CHARGES`       Print net charge on system, and all charges in the system
 :ref:`CHARST`        Print details of working in CHARST
 :ref:`CHECK`         Report possible faults in input geometry
-:ref:`CIS`           C.I. uses 1 electron excitations only 
-:ref:`CISD`          C.I. uses 1 and electron excitations 
-:ref:`CISDT`         C.I. uses 1, 2 and 3 electron excitations 
+:ref:`CIS`           Restrict an active space to 1-electron excitations 
+:ref:`CISD`          Restrict an active space to 1 & 2-electron excitations (:ref:`INDO` compatible)
+:ref:`CISDT`         Restrict an active space to 1, 2, & 3-electron excitations
 :ref:`COMPARE`       Compare the geometries of two systems
 :ref:`COMPFG`        Print heat of formation calculated in COMPFG 
 :ref:`COSCCH`        Add in COSMO charge corrections
@@ -60,12 +60,12 @@
 :ref:`DERIV`         Print part of working in DERIV 
 :ref:`DERNVO`        Print part of working in DERNVO 
 :ref:`DFORCE`        Force calculation specified, also print force matrix. 
-:ref:`DFP`           Use Davidson-Fletcher-Powell method to optimize geometries <!--
+:ref:`DFP`           Use Davidson-Fletcher-Powell method to optimize geometries
 :ref:`DIPOLE`        In animations graphs, replace &Delta;Hf with dipole
 :ref:`DISEX`         Distance for interactions in fine grid in COSMO 
-:ref:`DISP`          Print the hydrogen bonding and dispersion contributions to the heat of formation
+:ref:`DISP`          Print post-SCF corrections to the heat of formation
 :ref:`DMAX`          Maximum stepsize in eigenvector following 
-:ref:`DOUBLET`       Doublet state required 
+:ref:`DOUBLET`       Target a doublet state
 :ref:`DRC`           Dynamic reaction coordinate calculation 
 :ref:`DUMP`          Write restart files every n seconds 
 :ref:`ECHO`          Data are echoed back before calculation starts 
@@ -77,8 +77,8 @@
 :ref:`ESP`           Do not use.&nbsp; Use GRAPHF instead.
 :ref:`ESPGRID`       Do not use.&nbsp; Use GRAPHF instead.
 :ref:`ESR`           Calculate RHF spin density 
-:ref:`EXCITED`       Optimize first excited singlet state 
-:ref:`EXTERNAL`      Read parameters off disk 
+:ref:`EXCITED`       Target the first excited singlet state
+:ref:`EXTERNAL`      Read parameters off disk
 :ref:`FIELD`         An external electric field is to be used 
 :ref:`FILL`          In RHF open and closed shell, force M.O. n to be filled 
 :ref:`FLEPO`         Print details of geometry optimization 
@@ -100,7 +100,7 @@
 :ref:`HESSIAN`       Print Hessian from geometry optimization
 :ref:`HTML`          Write a web-page for displaying and editing a protein
 :ref:`HYPERFINE`     Hyperfine coupling constants to be calculated 
-:ref:`INDO`          Use the INDO/S method
+:ref:`INDO`          Use the INDO/S model for excited states
 :ref:`INT`           Make all coordinates internal coordinates 
 :ref:`INVERT`        Reverse all optimization flags
 :ref:`IONIZE`        Do not use - use SITE=(IONIZE) instead 
@@ -119,11 +119,11 @@
 :ref:`LOCAL`         Print localized orbitals.&nbsp; These are also called Natural Bond Orbitals or NBO
 :ref:`LOCATE-TS`     Given reactants and products, locate the transition state connecting them
 :ref:`LOG`           Generate a log file
-:ref:`MAXCI`         Use a maximum of n microstates in an INDO/S calculation
-:ref:`MECI`          Print details of MECI calculation 
+:ref:`MAXCI`         Maximum number of configurations in the active space (:ref:`INDO` only)
+:ref:`MECI`          Print details of MECI calculations
 :ref:`MERS`          Keyword generated by MAKPOL for use with programBZ 
 :ref:`METAL`         Make specified atoms 100% ionic
-:ref:`MICROS`        Use specific microstates in the C.I. 
+:ref:`MICROS`        Restrict an active space to a list of microstates
 :ref:`MINI`          Reduce the size of the output by only printing specified atoms
 :ref:`MINMEP`        Minimize MEP minima in the plane defined 
 :ref:`MMOK`          Use molecular mechanics correction to CONH bonds 
@@ -132,19 +132,18 @@
 :ref:`MODE`          In EF, follow Hessian mode no. n 
 :ref:`MOLDAT`        Print details of working in MOLDAT 
 :ref:`MOLSYM`        Print details of working in MOLSYM 
-:ref:`MOL_QMMM`      Incorporate environmental effects in the QM/MM approach
 :ref:`MOPAC`         Use old MOPAC definition for 2nd and 3rd atoms 
 :ref:`MOZYME`        Use the Localized Molecular Orbital method to speed up the SCF
-:ref:`MRCI`          Use multi-reference configuration interaction in &nbsp;INDO/S calculations
-:ref:`MS`            In MECI, magnetic component of spin 
+:ref:`MRCI`          Use an active space of excitations from multiple reference states (:ref:`INDO` only)
+:ref:`MS`            Electron spin multiplicity
 :ref:`MULLIK`        Print the Mulliken population analysis 
 :ref:`Nstarstar2`    In excited state COSMO calculations, set the value of N**2
 :ref:`NLLSQ`         Minimize gradients using NLLSQ 
-:ref:`NOANCI`        Do not use analytical C.I. derivatives 
+:ref:`NOANCI`        Use numerical CI derivatives (analytical derivatives are the default)
 :ref:`NOCOMMENTS`    Ignore all lines except ATOM, HETATM, and TER in PDB files
 :ref:`NOLOG`         Suppress log file trail, where possible 
 :ref:`NOMM`          Do not use molecular mechanics correction to CONH bonds 
-:ref:`NONET`         NONET state required 
+:ref:`NONET`         Target a nonet state
 :ref:`NONR`          Do not use Newton-Raphson method in EF 
 :ref:`NOOPT`         Do not optimize the coordinates of all atoms of type X
 :ref:`NOREOR`        In symmetry work, FORCE calculations, and whenGEO_REF is used, use the supplied orientation 
@@ -157,13 +156,13 @@
 :ref:`NOXYZ`         Do not print Cartesian coordinates 
 :ref:`NSPA`          Sets number of geometric segments in COSMO 
 :ref:`NSURF`         Number of surfaces in an ESP calculation 
-:ref:`OCTET`         Octet state required 
+:ref:`OCTET`         Target an octet state
 :ref:`OLDCAV`        In COSMO, use the old Solvent Accessible Surface calculation
 :ref:`OLDENS`        Read initial density matrix off disk 
 :ref:`OLDFPC`        Use the old fundamental physical constants 
 :ref:`OLDGEO`        Previous geometry to be used 
 :ref:`OMIN`          In TS, minimum allowed overlap of eigenvectors 
-:ref:`OPEN`          Open-shell UHF or RHF calculation requested 
+:ref:`OPEN`          Distribute electrons over partially occupied orbitals
 :ref:`OPT`           Optimize coordinates of all atoms within n.nn &Aring;ngstroms of atoms labeled &quot;text&quot;
 :ref:`OPT`           Optimize the coordinates of all atoms of type X
 :ref:`OUTPUT`        Reduce the amount of output (useful for large systems)
@@ -171,7 +170,7 @@
 :ref:`PDB`           Input geometry is in protein data bank format 
 :ref:`PDB`           User defined chemical symbols in protein data base 
 :ref:`PDBOUT`        Output geometry in pdb format 
-:ref:`PECI`          C.I. involves paired excitations only 
+:ref:`PECI`          Restrict an active space to 1-electron and paired 2-electron excitations
 :ref:`PI`            Resolve density matrix into &sigma;, &pi;, and &delta; components 
 :ref:`PKA`           Print the pKa for ionizable hydrogen atoms attached to oxygen atoms
 :ref:`PL`            Monitor convergence of density matrix in ITER 
@@ -203,8 +202,8 @@
 :ref:`PULAY`         Use Pulay's converger to obtain a SCF 
 :ref:`QMMM`          Incorporate environmental effects in the QM/MM approach
 :ref:`QPMEP`         Charges derived from Wang-Ford type AM1 MEP 
-:ref:`QUARTET`       Quartet state required 
-:ref:`QUINTET`       Quintet state required 
+:ref:`QUARTET`       Target a quartet state
+:ref:`QUINTET`       Target a quintet state
 :ref:`RABBIT`        Generate localized molecular orbitals with hybrid orbitals for double bonds
 :ref:`RAMA`          Print Ramachandra angles for the residues in a protein
 :ref:`RAPID`         In MOZYME geometry optimizations, only use atoms being optimized in the SCF 
@@ -215,25 +214,24 @@
 :ref:`RESEQ`         Re-arrange the atoms to match the PDB convention
 :ref:`RESIDUES`      Label each atom in a polypeptide with the amino acid residue
 :ref:`RESTART`       Calculation restarted 
-:ref:`RHF`           Use Restricted Hartree-Fock methods 
+:ref:`RHF`           Use a restricted Hartree-Fock Hamiltonian
 :ref:`RM1`           Use the RM1 model
 :ref:`RMAX`          In TS, maximum allowed ratio for energy change 
 :ref:`RMIN`          In TS, minimum allowed ratio for energy change 
-:ref:`ROOT`          Root n to be optimized in a C.I. calculation 
+:ref:`ROOT`          Target an excited state by energy or symmetry
 :ref:`RSCAL`         In EF, scale p-RFO to trust radius 
 :ref:`RSOLV`         Effective radius of solvent in COSMO 
 :ref:`SADDLE`        Optimize transition state 
 :ref:`SCALE`         Scaling factor for van der waals distance in ESP 
 :ref:`SCFCRT`        Default SCF criterion replaced by the value supplied 
 :ref:`SCINCR`        Increment between layers in ESP 
-:ref:`SEPTET`        Septet state required 
+:ref:`SEPTET`        Target a septet state 
 :ref:`SETPI`         In MOZYME, some &pi; bonds are explicitly set by the user
 :ref:`SETUP`         Extra keywords to be read from setup file 
-:ref:`SEXTET`        Sextet state required 
+:ref:`SEXTET`        Target a sextet state
 :ref:`SHIFT`         a damping factor of n defined to start SCF 
-:ref:`SHUT`          Send a command to MOPAC to make a restart and density file, then stop.
 :ref:`SIGMA`         Minimize gradients using SIGMA 
-:ref:`SINGLET`       Singlet state required 
+:ref:`SINGLET`       Target a singlet state
 :ref:`SITE`          Define ionization state of residues in proteins
 :ref:`SLOG`          In L-BFGS optimization, use fixed step of length n .nn 
 :ref:`SLOPE`         Multiplier used to scale MNDO charges 
@@ -255,20 +253,20 @@
 :ref:`SYMTRZ`        Print details of working in subroutine SYMTRZ.
 :ref:`T`             A time of n seconds requested 
 :ref:`T-PRIORITY`    Time takes priority in DRC 
-:ref:`TDIP`          Output the transition-dipole moments between excited states in an INDO/S calculation
+:ref:`TDIP`          Output transition-dipole moments between excited states (:ref:`INDO` only)
 :ref:`THERMO`        Perform a thermodynamics calculation 
 :ref:`TIMES`         Print times of various stages 
 :ref:`TRANS`         The system is a transition state (used in thermodynamics calculation) 
-:ref:`TRIPLET`       Triplet state required 
+:ref:`TRIPLET`       Target a triplet state
 :ref:`TS`            Using EF routine for TS search 
-:ref:`UHF`           Use the Unrestricted Hartree-Fock method 
+:ref:`UHF`           Use an unrestricted Hartree-Fock Hamiltonian
 :ref:`VDW`           Van der waals radius for atoms in COSMO defined by user 
 :ref:`VDWM`          Van der waals radius for atoms in MOZYME defined by user 
 :ref:`VECTORS`       Print final vectors
 :ref:`VELOCITY`      Supply the initial velocity vector in a DRC calculation 
 :ref:`WILLIAMS`      Use Williams surface 
-:ref:`WRTCI`         Output a maximum of n excited states in an INDO/S calculation
-:ref:`WRTCONF`       Print the CI coefficients of all electron configurations with coefficients greater than n.nn. in an INDO/S calculation
+:ref:`WRTCI`         Maximum number of excited states to print (:ref:`INDO` only)
+:ref:`WRTCONF`       Coefficient threshold for printing components of an excited state (:ref:`INDO` only)
 :ref:`X-PRIORITY`    Geometry changes take priority in DRC 
 :ref:`XENO`          Allow non-standard residues in proteins to be labeled.
 :ref:`XYZ`           Do all geometric operations in Cartesian coordinates 

@@ -1,21 +1,15 @@
 .. _UHF:
 
-``UHF``
-=======
+UHF
+===
 
-The unrestricted Hartree-Fock Hamiltonian is to be used.
+Requests an unrestricted Hartree-Fock Hamiltonian that allows the two electrons of opposite spin in an electron pair to have different spatial orbitals.
 
-This is the default for odd-electron (radical) systems because geometry
-optimization using UHF runs faster than when ``RHF`` is used.  This is
-because the open-shell RHF gradient calculation is relatively slow.
+For supported features, this is the default behavior for odd-electron systems (i.e. radicals).
+A UHF calculation can be requested for even-electron systems, but it should produce the same results as a spin-restricted calculation (:ref:`RHF`).
 
-If UHF methods are to be used on even electron systems, add keyword
-``UHF``.
-
-A limitation of the ``UHF`` method is that the resulting wavefunction is
-not spin quantized, that is, although <S:sub:`z`> has a  well-defined
-value, e.g. 0, 1/2, 1, 3/2, etc., <S:sup:`2`> is normally not
-quantized.  For a system with an <S:sub:`z`> of 1/2, the <S:sup:`2`>
-should be 3/4 = 1/2*(1/2+1), but is usually higher.  This is a
-consequence of spin contamination.  Spin contamination is not present if
-``UHF`` is not used.
+UHF calculations often contain unphysical spin contamination.
+In the absence of external magnetic fields,
+a many-electron wavefunction should be an eigenstate of the z-axis spin operator, :math:`S_z`, and the total spin operator, :math:`S^2`.
+The additional orbital relaxations allowed by an RHF calculation breaks the overall spin symmetry,
+which enables the wavefunction to lower its total energy by deviating from an eigenstate of :math:`S^2`.

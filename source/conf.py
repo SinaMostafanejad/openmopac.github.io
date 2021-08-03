@@ -35,6 +35,7 @@ extensions = [
 
 # Main bibliography for the documentation (excluding scientific impact list)
 bibtex_bibfiles = ['refs.bib','impact/impact.bib']
+bibtex_default_style = 'plain'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

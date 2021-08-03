@@ -1,32 +1,25 @@
 .. _CISDT:
 
-``CISDT``
-=========
+CISDT
+=====
 
-In configuration interaction calculations, the ground state and all
-microstates resulting from single, double, and triple electron
-excitations are used if ``CISDT`` is specified. (Read ``CISDT`` as
-Configuration Interaction Singles, Doubles, and Triples.)
+Restricts the active space to single-electron, double-electron, and triple-electron excitations
+for configuration interaction calculations (i.e. Configuration Interaction Singles, Doubles, and Triples).
 
-The number of states considered in a CISDT C.I. involving *n*
-doubly-occupied M.O.s and *m* empty M.O.s is:
+.. table:: Number of configurations for :math:`n` doubly-occupied orbitals and :math:`m` empty orbitals
 
-No. of States = 1 + 2.\ *n.m*  + (*n.m*)\ :sup:`2` +
-(*n*\ (*n*-1).*m*\ (*m*-1))/2 +
-(*n*\ :sup:`2`\ (*n*-1).*m*\ :sup:`2`\ (*m*-1))/2 +
-(*n*\ (*n*-1)(*n*-2).*m*\ (*m*-1)(*m*-2))/18
+  ===================================================== =================================
+  excitation type                                       # of configs
+  ===================================================== =================================
+  none (RHF ground state)                               :math:`1`
+  1 :math:`\alpha` electron                             :math:`m n`
+  1 :math:`\beta` electron                              :math:`m n`
+  1 :math:`\alpha` electron & 1 :math:`\beta` electron  :math:`m^2 n^2`
+  2 :math:`\alpha` electrons                            :math:`m (m-1) n (n-1)/4`
+  2 :math:`\beta` electrons                             :math:`m (m-1) n (n-1)/4`
+  1 :math:`\alpha` electron & 2 :math:`\beta` electrons :math:`m^2 (m-1) n^2 (n-1)/4`
+  2 :math:`\alpha` electrons & 1 :math:`\beta` electron :math:`m^2 (m-1) n^2 (n-1)/4`
+  3 :math:`\alpha` electrons                            :math:`m(m-1)(m-2)n(n-1)(n-2)/36`
+  3 :math:`\beta` electrons                             :math:`m(m-1)(m-2)n(n-1)(n-2)/36`
+  ===================================================== =================================
 
-This represents:
-
-| Ground state
-| + (one α electron excited + one β electron excited)
-| + (one α electron and one β electron excited)
-| + (two α electrons excited + two β electrons excited)
-| + (one α electron and two β electrons excited + two α electrons and
-  one β electron excited)
-| + (three α electrons excited + three β electrons excited)
-
-The first term represents the ground state, the second term represents
-number of one-electron excitations, the third and fourth terms represent
-the number of two-electron excitations, and the fifth and sixth terms
-represent the number of three-electron excitations.
