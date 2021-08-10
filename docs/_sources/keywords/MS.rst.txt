@@ -21,7 +21,7 @@ MECI calculations are not spin-adapted, therefore all integer or half-integer sp
 Non-zero spin multiplicity is directly compatible with UHF calculations unless the specified spin state is not physically accessible.
 Spin-polarized UHF calculations are suitable for studying potential energy surfaces and performing geometry optimizations.
 
-For open-shell RHF calculations, a compatible open shell must be defined using either the :ref:`C.I.` or :ref:`OPEN` keywords.
+For open-shell RHF calculations, a compatible open shell must be defined using either the :ref:`CdotIdot` or :ref:`OPEN` keywords.
 Electrons are statistically distributed over alpha and beta spins in the open-shell RHF Hamiltonian,
 and the total energy is corrected by a post-SCF configuration interaction calculation to recover the correct spin state.
 Spin-polarized RHF calculations are suitable for studying electronic excited states through configuration interaction calculations.
@@ -29,5 +29,5 @@ Spin-polarized RHF calculations are suitable for studying electronic excited sta
 The simplest ways to specify a compatible active space for open-shell RHF calculations are either ``C.I.=2x`` or ``OPEN(2x,2x)``.
 
 .. note::
-  Most quantum chemistry software specifies spin states using spin multiplicity, which has a different offset and prefactor than the spin value used in MOPAC.
+  Most quantum chemistry software specifies spin states using spin multiplicity, which has a different offset and scaling than the spin value used in MOPAC.
   For example, a singlet state has a multiplicity of 1, a doublet state has a multiplicity of 2, and a triplet state has a multiplicity of 3.

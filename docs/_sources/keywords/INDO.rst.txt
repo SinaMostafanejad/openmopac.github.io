@@ -23,6 +23,6 @@ INDO calculations in MOPAC are incompatible with unrestricted orbitals (:ref:`UH
 but compatible with restricted open-shell orbitals (:ref:`RHF`).
 Hoowever, the SCF convergence of open-shell RHF calculations may be poor.
 
-The number of active configurations can be adjusted using :ref:`MAXCI`, :ref:`C.I.`, :ref:`C.I.D.`, and :ref:`C.A.S.`.
+The number of active configurations can be adjusted using :ref:`MAXCI`, :ref:`CdotIdot`, :ref:`CdotIdotDdot`, and :ref:`CdotAdotSdot`.
 The electron configurations used in INDO calculations are spin-adapted,
 and higher-spin states can be selected with their appropriate keyword (:ref:`MS`, :ref:`DOUBLET`, :ref:`TRIPLET`, etc.).

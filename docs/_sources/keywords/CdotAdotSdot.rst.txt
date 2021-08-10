@@ -18,7 +18,8 @@ A CAS contains all spin-adapted configurations of electrons rearranged within th
 
 By default, 2 orbitals are actived when :ref:`MRCI` is specified (equivalent to ``C.A.S.=2``).
 
-If the ``C.A.S.`` keyword is combined with other keywords related to active spaces (:ref:`MRCI`, :ref:`CIS`, :ref:`CISD`, :ref:`C.I.`, :ref:`C.I.D.`),
+If the ``C.A.S.`` keyword is combined with other keywords related to active spaces
+(:ref:`MRCI`, :ref:`CIS`, :ref:`CISD`, :ref:`CdotIdot`, :ref:`CdotIdotDdot`),
 the CAS is further expanded by applying single-electron or double-electron excitations to its configurations.
 
 Note that the size of CAS grows exponentially with :math:`n`.
