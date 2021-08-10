@@ -5,12 +5,12 @@ MICROS
 
 Restricts the active space of configuration interaction calculations to a list of microstates specified in the input file after the geometry and symmetry data.
 
-**SYNTAX** ``MICROS=n``
+**SYNTAX:** ``MICROS=n``
 
 The microstate list contains :math:`n` entries.
 
 The list is preceeded by a line containing ``MICROS`` and is separated from the geometry and symmetry data by a blank line.
-The remaining :math:`n` lines each contain the specification of one microstate as a string of ``0``s and ``1``s.
+The remaining :math:`n` lines each contain the specification of one microstate as a string consisting of ``0``'s and ``1``'s.
 For :math:`m` active orbitals (specified by ``C.I.=m``, ``C.I.=(m,*)``, or ``OPEN(*,m)``),
 each microstate defines the occupation of alpha and beta orbitals with a list of :math:`2m` occupations,
 where ``0`` represents unoccupied and ``1`` represents occupied.

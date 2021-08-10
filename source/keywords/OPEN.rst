@@ -18,8 +18,8 @@ with an independent :math:`m/(2n)` probability of the orbital containing an alph
 For valid occupation probabilities, :math:`m \le 2n` must be satisfied.
 
 The ``OPEN`` keyword in an ``RHF`` calculation also expands the set of active orbitals to include the partially occupied orbitals.
-The active space can be further expanded using the :ref:`C.I.` keyword, but the new active space must contain all partially occupied orbitals
-or MOPAC will report an error.
+The active space can be further expanded using the :ref:`CdotIdot` keyword, but the new active space
+must contain all partially occupied orbitals or MOPAC will report an error.
 
 In a :ref:`UHF` calculation, the total number of alpha minus :math:`m` fully occupy the lowest-energy alpha orbitals.
 The remaining :math:`m` alpha electrons are uniformly spread over the :math:`n` lowest-energy unoccupied alpha orbitals with an occupation over :math:`m/n` per orbital.

@@ -12,7 +12,7 @@
 :ref:`ALT_A`         In PDB files with alternative atoms, select atoms A 
 :ref:`AM1`           Use the AM1 model
 :ref:`ANGSTROMS`     Read the input geometry in angstroms
-:ref:`AUTOSYM`       Symmetry to be imposed automatically 
+:ref:`AUTOSYM`       Automatically impose a subset of :ref:`SYMMETRY` constraints
 :ref:`AUX`           Output auxiliary information for use by other programs
 :ref:`BANANA`        Generate localized molecular orbitals with hybrid orbitals for double bonds
 :ref:`BAR`           reduce bar length by a maximum of n.nn% 
@@ -28,7 +28,7 @@
 :ref:`CAMP`          Use Camp-King converger in SCF 
 :ref:`CARTAB`        Print point-group character table
 :ref:`CHAINS`        In a protein, explicitely define the letters of chains.
-:ref:`CHARGE`        Charge on system = n (e.g. NH4 = +1) 
+:ref:`CHARGE`        Total electric charge on the system (:ref:`MOZYME` compatible)
 :ref:`CHARGES`       Print net charge on system, and all charges in the system
 :ref:`CHARST`        Print details of working in CHARST
 :ref:`CHECK`         Report possible faults in input geometry
@@ -65,7 +65,7 @@
 :ref:`DISEX`         Distance for interactions in fine grid in COSMO 
 :ref:`DISP`          Print post-SCF corrections to the heat of formation
 :ref:`DMAX`          Maximum stepsize in eigenvector following 
-:ref:`DOUBLET`       Target a doublet state
+:ref:`DOUBLET`       Target a doublet spin state
 :ref:`DRC`           Dynamic reaction coordinate calculation 
 :ref:`DUMP`          Write restart files every n seconds 
 :ref:`ECHO`          Data are echoed back before calculation starts 
@@ -135,7 +135,7 @@
 :ref:`MOPAC`         Use old MOPAC definition for 2nd and 3rd atoms 
 :ref:`MOZYME`        Use the Localized Molecular Orbital method to speed up the SCF
 :ref:`MRCI`          Use an active space of excitations from multiple reference states (:ref:`INDO` only)
-:ref:`MS`            Electron spin multiplicity
+:ref:`MS`            Target a spin state by its spin quantum number
 :ref:`MULLIK`        Print the Mulliken population analysis 
 :ref:`Nstarstar2`    In excited state COSMO calculations, set the value of N**2
 :ref:`NLLSQ`         Minimize gradients using NLLSQ 
@@ -143,20 +143,20 @@
 :ref:`NOCOMMENTS`    Ignore all lines except ATOM, HETATM, and TER in PDB files
 :ref:`NOLOG`         Suppress log file trail, where possible 
 :ref:`NOMM`          Do not use molecular mechanics correction to CONH bonds 
-:ref:`NONET`         Target a nonet state
+:ref:`NONET`         Target a nonet spin state
 :ref:`NONR`          Do not use Newton-Raphson method in EF 
 :ref:`NOOPT`         Do not optimize the coordinates of all atoms of type X
 :ref:`NOREOR`        In symmetry work, FORCE calculations, and whenGEO_REF is used, use the supplied orientation 
 :ref:`NORESEQ`       Suppress the default re-sequencing of atoms to the PDB sequence
 :ref:`NOSWAP`        Do not allow atom swapping when GEO_REF is used
-:ref:`NOSYM`         Point-group symmetry set to C1 
+:ref:`NOSYM`         Reduce point-group symmetry to C1
 :ref:`NOTER`         Do not put &quot;TER&quot;s in PDB files 
 :ref:`NOTHIEL`       Do not use Thiel's FSTMIN technique 
 :ref:`NOTXT`         Remove any text from atom symbols 
 :ref:`NOXYZ`         Do not print Cartesian coordinates 
 :ref:`NSPA`          Sets number of geometric segments in COSMO 
 :ref:`NSURF`         Number of surfaces in an ESP calculation 
-:ref:`OCTET`         Target an octet state
+:ref:`OCTET`         Target an octet spin state
 :ref:`OLDCAV`        In COSMO, use the old Solvent Accessible Surface calculation
 :ref:`OLDENS`        Read initial density matrix off disk 
 :ref:`OLDFPC`        Use the old fundamental physical constants 
@@ -202,8 +202,8 @@
 :ref:`PULAY`         Use Pulay's converger to obtain a SCF 
 :ref:`QMMM`          Incorporate environmental effects in the QM/MM approach
 :ref:`QPMEP`         Charges derived from Wang-Ford type AM1 MEP 
-:ref:`QUARTET`       Target a quartet state
-:ref:`QUINTET`       Target a quintet state
+:ref:`QUARTET`       Target a quartet spin state
+:ref:`QUINTET`       Target a quintet spin state
 :ref:`RABBIT`        Generate localized molecular orbitals with hybrid orbitals for double bonds
 :ref:`RAMA`          Print Ramachandra angles for the residues in a protein
 :ref:`RAPID`         In MOZYME geometry optimizations, only use atoms being optimized in the SCF 
@@ -225,18 +225,18 @@
 :ref:`SCALE`         Scaling factor for van der waals distance in ESP 
 :ref:`SCFCRT`        Default SCF criterion replaced by the value supplied 
 :ref:`SCINCR`        Increment between layers in ESP 
-:ref:`SEPTET`        Target a septet state 
+:ref:`SEPTET`        Target a septet spin state 
 :ref:`SETPI`         In MOZYME, some &pi; bonds are explicitly set by the user
 :ref:`SETUP`         Extra keywords to be read from setup file 
-:ref:`SEXTET`        Target a sextet state
+:ref:`SEXTET`        Target a sextet spin state
 :ref:`SHIFT`         a damping factor of n defined to start SCF 
 :ref:`SIGMA`         Minimize gradients using SIGMA 
-:ref:`SINGLET`       Target a singlet state
+:ref:`SINGLET`       Target a singlet spin state
 :ref:`SITE`          Define ionization state of residues in proteins
 :ref:`SLOG`          In L-BFGS optimization, use fixed step of length n .nn 
 :ref:`SLOPE`         Multiplier used to scale MNDO charges 
 :ref:`SMOOTH`        In a GRID calculation, remove artifacts caused by the order in which points are calculated
-:ref:`SNAP`          Increase precision of symmetry angles 
+:ref:`SNAP`          Snap Z-matrix angles to common high-symmetry values
 :ref:`SPARKLE`       Use sparkles instead of atoms with basis sets
 :ref:`SPIN`          Print final UHF spin matrix 
 :ref:`START_RES`     Define starting residue numbers in a protein, if different from the default
@@ -248,7 +248,7 @@
 :ref:`SUPER`         Print superdelocalizabilities 
 :ref:`SYBYL`         Output a file for use by Tripos's SYBYL program
 :ref:`SYMAVG`        Average symmetry equivalent ESP charges 
-:ref:`SYMMETRY`      Impose symmetry conditions 
+:ref:`SYMMETRY`      Impose Z-matrix and Cartesian coordinate constraints
 :ref:`SYMOIR`        Print characters of eigenvectors and print number of I.R.s
 :ref:`SYMTRZ`        Print details of working in subroutine SYMTRZ.
 :ref:`T`             A time of n seconds requested 
@@ -257,7 +257,7 @@
 :ref:`THERMO`        Perform a thermodynamics calculation 
 :ref:`TIMES`         Print times of various stages 
 :ref:`TRANS`         The system is a transition state (used in thermodynamics calculation) 
-:ref:`TRIPLET`       Target a triplet state
+:ref:`TRIPLET`       Target a triplet spin state
 :ref:`TS`            Using EF routine for TS search 
 :ref:`UHF`           Use an unrestricted Hartree-Fock Hamiltonian
 :ref:`VDW`           Van der waals radius for atoms in COSMO defined by user 
