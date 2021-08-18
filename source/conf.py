@@ -33,6 +33,13 @@ extensions = [
     'sphinxcontrib.bibtex',
 ]
 
+# Warning banner
+rst_prolog = """
+.. warning::
+  This website is presently under development.
+  The active website for MOPAC is still http://openmopac.net until the official open-source release of MOPAC in late 2021.
+"""
+
 # Main bibliography for the documentation (excluding scientific impact list)
 bibtex_bibfiles = ['refs.bib','impact/impact.bib']
 bibtex_default_style = 'plain'
